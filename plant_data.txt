@@ -1,0 +1,26 @@
+
+WATERING FREQUENCY
+
+monstera = every 11 days
+devils ivy = every 7 days
+peace lily = every 7 days
+ficus = every 5 days
+succulent = every 3 days 
+
+
+REPOT FREQUENCY
+
+monstera = every 365 days
+devils ivy = every 365 days
+peace lily = every 730 days
+ficus = every 730 days
+succulent = every 730 days
+
+
+LOCATION
+
+monstera = near window 
+devils ivy = not near window
+peace lily = not near window
+ficus = near window
+succulent = near window
