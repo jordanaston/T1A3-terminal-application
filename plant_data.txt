@@ -2,7 +2,7 @@
 WATERING FREQUENCY
 
 monstera = every 11 days
-devils ivy = every 7 days
+pothos = every 7 days
 peace lily = every 7 days
 ficus = every 5 days
 succulent = every 3 days 
