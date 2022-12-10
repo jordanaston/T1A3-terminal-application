@@ -23,18 +23,12 @@ print("Currently, this app supports the following popular indoor house-plants: \
 print("If you have any plants outside of this list, please come back another time when our list is updated! \nBut for now, let's help you out with what we support :) \n")
 print("To get started, tell me a little bit about your current house-plant situation. \n")
 
-
 # Instructions for user input
 instructions = "\nINSTRUCTIONS: \n1: Enter 'A' to ADD a new plant to your collection. \n2: Enter 'R' to REMOVE a plant from your collection. \n3. Enter 'F' to FINALISE your plant collection. \n "
 print(instructions)
 
-
 # Function for adding and removing plants to the users plant collection.
-# user_option = input("\nWhat would you like to do?\n")
-
-
 def update_plant_collection():
-
     user_option = input("\nWhat would you like to do?\n")
     if user_option.upper() == "A":
         add_plant = input("\nWhich plant would you like to add? \n")
@@ -73,7 +67,10 @@ def update_plant_collection():
             print(your_table)
             print(instructions)
             update_plant_collection()
-
+        
+        else:
+            print("\nIVALID SELECTION! Please select 'A', 'R' or 'F'\n")
+            update_plant_collection()
 
     elif user_option.upper() == "R":
         remove_plant = input("Which plant would you like to remove? \n'1' for ROW 1\n'2' for ROW 2\n'3' for ROW 3 and so on...\n ")
@@ -111,6 +108,10 @@ def update_plant_collection():
             print(your_table)
             print(instructions)
             update_plant_collection()  
+
+        else:
+            print("\nIVALID SELECTION! Please select 'A', 'R' or 'F'\n")
+            update_plant_collection()
         
     elif user_option.upper() == "F":
         print("\nThanks, your collection is complete!\n")
