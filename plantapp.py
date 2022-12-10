@@ -25,7 +25,7 @@ print("To get started, tell me a little bit about your current house-plant situa
 
 
 # Instructions for user input
-instructions = "\nINSTRUCTIONS: \n1: Enter 'A' to ADD a new plant to your collection. \n2: Enter 'R' to REMOVE a plant from your collection. \n3. Enter 'E' to finalise your plant collection. \n "
+instructions = "\nINSTRUCTIONS: \n1: Enter 'A' to ADD a new plant to your collection. \n2: Enter 'R' to REMOVE a plant from your collection. \n3. Enter 'F' to FINALISE your plant collection. \n "
 print(instructions)
 
 
@@ -78,48 +78,48 @@ def update_plant_collection():
 
 
     elif user_option == "R":
-        remove_plant = input("Which plant would you like to remove? ")
-        if remove_plant == "MONSTERA":
-            print("\n You removed MONSTERA. \n")
-            # your_table.add_row(["MONSTERA",'','','',])
+        remove_plant = input("Which plant would you like to remove? \n'1' for ROW 1\n'2' for ROW 2\n'3' for ROW 3 and so on...\n ")
+        if remove_plant == "1":
+            print("\n You removed plant 1 from your collection. \n")
+            your_table.del_row(0)
             print(your_table)
             print(instructions)
             update_plant_collection()
 
-        elif remove_plant == "POTHOS":
-            print("\n You removed POTHOS. \n")
-            # your_table.add_row(["POTHOS",'','','',])
+        elif remove_plant == "2":
+            print("\n You removed plant 2 from your collection. \n")
+            your_table.del_row(1)
             print(your_table)
             print(instructions)
             update_plant_collection()
 
-        elif remove_plant == "PEACE LILY":
-            print("\n You removed PEACE LILY. \n")
-            # your_table.add_row(["PEACE LILY",'','','',])
+        elif remove_plant == "3":
+            print("\n You removed plant 3 from your collection. \n")
+            your_table.del_row(2)
             print(your_table)
             print(instructions)
             update_plant_collection()
 
-        elif remove_plant == "FICUS":
-            print("\n You removed FICUS. \n")
-            your_table.add_row(["FICUS",'','','',])
+        elif remove_plant == "4":
+            print("\n You removed plant 4 from your collection. \n")
+            your_table.del_row(3)
             print(your_table)
             print(instructions)
             update_plant_collection()
 
-        elif remove_plant == "SUCCULENT":
-            print("\n You removed SUCCULENT. \n")
-            # your_table.add_row(["SUCCULENT",'','','',])
+        elif remove_plant == "5":
+            print("\n You removed plant 5 from your collection. \n")
+            your_table.del_row(4)
             print(your_table)
             print(instructions)
             update_plant_collection()  
         
-    elif user_option == "E":
+    elif user_option == "F":
         print("Thanks!")
         # break
         
     else:
-        print("IVALID SELECTION! Please select 'A', 'R' or 'E'")
+        print("IVALID SELECTION! Please select 'A', 'R' or 'F'")
         update_plant_collection()
 
 update_plant_collection()
