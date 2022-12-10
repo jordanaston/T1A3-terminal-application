@@ -24,59 +24,103 @@ print("If you have any plants outside of this list, please come back another tim
 print("To get started, tell me a little bit about your current house-plant situation. \n")
 
 
-# Instructions for for user input
+# Instructions for user input
 instructions = "\nINSTRUCTIONS: \n1: Enter 'A' to ADD a new plant to your collection. \n2: Enter 'R' to REMOVE a plant from your collection. \n3. Enter 'E' to finalise your plant collection. \n "
 print(instructions)
 
 
 
 # Function for adding and removing plants to the users plant collection.
-add_delete_plant = input("\nWhat would you like to do?\n")
+# user_option = input("\nWhat would you like to do?\n")
 
 # LETS TAKE INPUT OF ALL PLANTS AT ONCE TO AVOID WET CODE > THEN YOU CAN USE INSTRUCTIONS (A,R,E) TO ADD / REMOVE / FINISH
 
 def update_plant_collection():
 
-        if add_delete_plant == "A":
-            add_plant = input("\nWhich plant would you like to add? \n")
+    user_option = input("\nWhat would you like to do?\n")
+    if user_option == "A":
+        add_plant = input("\nWhich plant would you like to add? \n")
 
-            if add_plant == "MONSTERA":
-                print("\n You added MONSTERA! \n")
-                your_table.add_row(["MONSTERA",'','','',])
-                print(your_table)
-                print(instructions)
+        if add_plant == "MONSTERA":
+            print("\n You added MONSTERA! \n")
+            your_table.add_row(["MONSTERA",'','','',])
+            print(your_table)
+            print(instructions)
+            update_plant_collection()
 
-            elif add_plant == "POTHOS":
-                print("\n You added POTHOS! \n")
-                your_table.add_row(["POTHOS",'','','',])
-                print(your_table)
+        elif add_plant == "POTHOS":
+            print("\n You added POTHOS! \n")
+            your_table.add_row(["POTHOS",'','','',])
+            print(your_table)
+            print(instructions)
+            update_plant_collection()
 
-            elif add_plant == "PEACE LILY":
-                print("\n You added PEACE LILY! \n")
-                your_table.add_row(["PEACE LILY",'','','',])
-                print(your_table)
+        elif add_plant == "PEACE LILY":
+            print("\n You added PEACE LILY! \n")
+            your_table.add_row(["PEACE LILY",'','','',])
+            print(your_table)
+            print(instructions)
+            update_plant_collection()
 
-            elif add_plant == "FICUS":
-                print("\n You added FICUS! \n")
-                your_table.add_row(["FICUS",'','','',])
-                print(your_table)
+        elif add_plant == "FICUS":
+            print("\n You added FICUS! \n")
+            your_table.add_row(["FICUS",'','','',])
+            print(your_table)
+            print(instructions)
+            update_plant_collection()
 
-            elif add_plant == "SUCCULENT":
-                print("\n You added SUCCULENT! \n")
-                your_table.add_row(["SUCCULENT",'','','',])
-                print(your_table)
+        elif add_plant == "SUCCULENT":
+            print("\n You added SUCCULENT! \n")
+            your_table.add_row(["SUCCULENT",'','','',])
+            print(your_table)
+            print(instructions)
+            update_plant_collection()
 
 
-        elif add_delete_plant == "R":
-            input("Which plant would you like to remove? ")
-                
+    elif user_option == "R":
+        remove_plant = input("Which plant would you like to remove? ")
+        if remove_plant == "MONSTERA":
+            print("\n You removed MONSTERA. \n")
+            # your_table.add_row(["MONSTERA",'','','',])
+            print(your_table)
+            print(instructions)
+            update_plant_collection()
+
+        elif remove_plant == "POTHOS":
+            print("\n You removed POTHOS. \n")
+            # your_table.add_row(["POTHOS",'','','',])
+            print(your_table)
+            print(instructions)
+            update_plant_collection()
+
+        elif remove_plant == "PEACE LILY":
+            print("\n You removed PEACE LILY. \n")
+            # your_table.add_row(["PEACE LILY",'','','',])
+            print(your_table)
+            print(instructions)
+            update_plant_collection()
+
+        elif remove_plant == "FICUS":
+            print("\n You removed FICUS. \n")
+            your_table.add_row(["FICUS",'','','',])
+            print(your_table)
+            print(instructions)
+            update_plant_collection()
+
+        elif remove_plant == "SUCCULENT":
+            print("\n You removed SUCCULENT. \n")
+            # your_table.add_row(["SUCCULENT",'','','',])
+            print(your_table)
+            print(instructions)
+            update_plant_collection()  
         
-        elif add_delete_plant == "E":
-            print("Thanks!")
-            # break
+    elif user_option == "E":
+        print("Thanks!")
+        # break
         
-        else:
-            print("IVALID SELECTION! Please select 'A', 'R' or 'E'")
+    else:
+        print("IVALID SELECTION! Please select 'A', 'R' or 'E'")
+        update_plant_collection()
 
 update_plant_collection()
 
