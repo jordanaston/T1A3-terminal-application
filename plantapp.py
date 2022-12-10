@@ -131,14 +131,22 @@ input("\n\nPress ENTER to continue...\n\n")
 print("\nTell me a little bit more about your " + (your_table.rows[0][0]) + "...\n")
 
 def fill_table_data():
+
     row_one_data = []
+
     if your_table.rows[0][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT":
-        add_plant_data = input("How many days since you last watered " + (your_table.rows[0][0]) + "? ")
+        add_plant_data = input("How many days since you last watered your " + (your_table.rows[0][0]) + "? ")
         row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted " + (your_table.rows[0][0]) + "? "))
+        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[0][0]) + "? "))
         row_one_data.append(add_plant_data)
-        add_plant_data = bool((input("Yes or No, do you keep your " + (your_table.rows[0][0]) + " near a window? ")))
-        row_one_data.append(add_plant_data)
+        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[0][0]) + " near a window? "))
+
+        if add_plant_data == "Y":
+            row_one_data.append(True)
+
+        elif add_plant_data == "N":
+            row_one_data.append(False)
+
         
         print(row_one_data)
         
