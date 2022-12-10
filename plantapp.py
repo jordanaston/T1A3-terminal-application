@@ -38,38 +38,38 @@ print(instructions)
 def update_plant_collection():
 
     user_option = input("\nWhat would you like to do?\n")
-    if user_option == "A":
+    if user_option.upper() == "A":
         add_plant = input("\nWhich plant would you like to add? \n")
 
-        if add_plant == "MONSTERA":
+        if add_plant.upper() == "MONSTERA":
             print("\n You added MONSTERA! \n")
             your_table.add_row(["MONSTERA",'','','',])
             print(your_table)
             print(instructions)
             update_plant_collection()
 
-        elif add_plant == "POTHOS":
+        elif add_plant.upper() == "POTHOS":
             print("\n You added POTHOS! \n")
             your_table.add_row(["POTHOS",'','','',])
             print(your_table)
             print(instructions)
             update_plant_collection()
 
-        elif add_plant == "PEACE LILY":
+        elif add_plant.upper() == "PEACE LILY":
             print("\n You added PEACE LILY! \n")
             your_table.add_row(["PEACE LILY",'','','',])
             print(your_table)
             print(instructions)
             update_plant_collection()
 
-        elif add_plant == "FICUS":
+        elif add_plant.upper() == "FICUS":
             print("\n You added FICUS! \n")
             your_table.add_row(["FICUS",'','','',])
             print(your_table)
             print(instructions)
             update_plant_collection()
 
-        elif add_plant == "SUCCULENT":
+        elif add_plant.upper() == "SUCCULENT":
             print("\n You added SUCCULENT! \n")
             your_table.add_row(["SUCCULENT",'','','',])
             print(your_table)
@@ -77,7 +77,7 @@ def update_plant_collection():
             update_plant_collection()
 
 
-    elif user_option == "R":
+    elif user_option.upper() == "R":
         remove_plant = input("Which plant would you like to remove? \n'1' for ROW 1\n'2' for ROW 2\n'3' for ROW 3 and so on...\n ")
         if remove_plant == "1":
             print("\n You removed plant 1 from your collection. \n")
@@ -114,17 +114,15 @@ def update_plant_collection():
             print(instructions)
             update_plant_collection()  
         
-    elif user_option == "F":
-        print("Thanks!")
-        # break
-        
+    elif user_option.upper() == "F":
+        print("\nThanks, your collection is complete!\n")
+         
     else:
-        print("IVALID SELECTION! Please select 'A', 'R' or 'F'")
+        print("\nIVALID SELECTION! Please select 'A', 'R' or 'F'\n")
         update_plant_collection()
 
 update_plant_collection()
 
-
-
-# print(your_table)
+print(your_table)
+print("\nThe above table is your final collection.\n")
 
