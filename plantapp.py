@@ -29,11 +29,9 @@ instructions = "\nINSTRUCTIONS: \n1: Enter 'A' to ADD a new plant to your collec
 print(instructions)
 
 
-
 # Function for adding and removing plants to the users plant collection.
 # user_option = input("\nWhat would you like to do?\n")
 
-# LETS TAKE INPUT OF ALL PLANTS AT ONCE TO AVOID WET CODE > THEN YOU CAN USE INSTRUCTIONS (A,R,E) TO ADD / REMOVE / FINISH
 
 def update_plant_collection():
 
