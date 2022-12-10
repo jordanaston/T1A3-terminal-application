@@ -12,12 +12,22 @@ your_table = PrettyTable(['Plant Name','No. Days Since Watered', 'No. Days Since
 # your_table.add_row(["FICUS",'','','',])
 # your_table.add_row(["SUCCULENT",'','','',])
 
-# Plant class data
+# Object Data for Plant Class
 MONSTERA = Plant("monstera", 11, 365, True)
 POTHOS = Plant("pothos", 7, 365, False)
 PEACE_LILY = Plant("peace lily", 7, 730, False)
 FICUS = Plant("ficus", 5, 730, True)
 SUCCULENT = Plant("succulent", 3, 730, True)
+DRACAENA = Plant("dracaena", 12, 1460, False)
+ALOE_VERA = Plant("aloe vera", 18, 1095, True)
+PEPEROMIA = Plant("peperomia", 10, 730, True)
+SNAKE_PLANT = Plant("snake plant", 7, 2555, True)
+TRADESCANTIA = Plant("tradescantia", 7, 356, False)
+CHINESE_EVERGREEN = Plant("chinese evergreen", 8, 730, True)
+HOYA = Plant("hoya", 14, 2190, False)
+ANTHURIUM = Plant("anthurium", 7, 730, False)
+PARLOR_PALM = Plant("palor palm", 7, 1095, False)
+PHILODENDRON = Plant("philodendron", 11, 1095, True)
 
 # Introduction to the app
 print("\n\nWelcome to PLANTAPP. \n")

@@ -1,21 +1,21 @@
 
 WATERING FREQUENCY
 
-monstera = every 11 days
-pothos = every 7 days
-peace lily = every 7 days
-ficus = every 5 days
-succulent = every 3 days 
-dracaena
-aloe vera
-peperomia
-snake plant
-tradescantia
-chinese evergreen
-hoya
-anthurium
-parlor palm
-philodendron
+monstera = about every 11 days
+pothos = about every 7 days
+peace lily = about every 7 days
+ficus = about every 5 days
+succulent = about every 3 days 
+dracaena = about every 12 days
+aloe vera = about every 18 days
+peperomia = about every 10 days
+snake plant = about every 7 days
+tradescantia = about every 7 days
+chinese evergreen = about every 8 days
+hoya = about every 14 days
+anthurium = about every 7 days
+parlor palm = about every 7 days
+philodendron = about every 11 days
 
 
 
@@ -26,6 +26,16 @@ devils ivy = every 365 days
 peace lily = every 730 days
 ficus = every 730 days
 succulent = every 730 days
+dracaena = about every 1460 days
+aloe vera = about every 1095 days
+peperomia = about every 730 days
+snake plant = about every 2555 days
+tradescantia = about every 365 days
+chinese evergreen = about every 730 days
+hoya = about every 2190 days
+anthurium = about every 730 days
+parlor palm = about every 1095 days
+philodendron = about every 1095 days
 
 
 LOCATION
@@ -35,3 +45,13 @@ devils ivy = not near window
 peace lily = not near window
 ficus = near window
 succulent = near window
+dracaena = not near window
+aloe vera = near window
+peperomia = near window
+snake plant = near window
+tradescantia = not near window
+chinese evergreen = near window
+hoya = not near window
+anthurium = not near window
+parlor palm = not near window
+philodendron = near window
