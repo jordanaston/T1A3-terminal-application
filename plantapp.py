@@ -269,7 +269,7 @@ def update_plant_collection():
             update_plant_collection()  
 
         else:
-            print("\nIVALID SELECTION! Please select 'A', 'R' or 'F'\n")
+            print("\nIVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
             update_plant_collection()
         
     elif user_option.upper() == "F":
@@ -289,6 +289,7 @@ os.system("clear")
 
 print("\nTell me a little bit more about your " + (your_table.rows[0][0]) + "...\n")
 
+
 def fill_table_data():
 
     row_one_data = []
@@ -306,7 +307,7 @@ def fill_table_data():
         elif add_plant_data == "N":
             row_one_data.append(False)
 
-        
-        print(row_one_data)
+        # print(row_one_data)
+        fill_table_data()
         
 fill_table_data()
