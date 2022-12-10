@@ -6,6 +6,17 @@ pothos = every 7 days
 peace lily = every 7 days
 ficus = every 5 days
 succulent = every 3 days 
+dracaena
+aloe vera
+peperomia
+snake plant
+tradescantia
+chinese evergreen
+hoya
+anthurium
+parlor palm
+philodendron
+
 
 
 REPOT FREQUENCY
