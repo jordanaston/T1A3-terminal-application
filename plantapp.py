@@ -6,11 +6,23 @@ os.system("clear")
 
 # Prettytable data pre-filled
 your_table = PrettyTable(['Plant Name','No. Days Since Watered', 'No. Days Since Re-Pot','Near Window'])
-# your_table.add_row(["MONSTERA",'','','',])
-# your_table.add_row(["POTHOS",'','','',])
-# your_table.add_row(["PEACE LILY",'','','',])
-# your_table.add_row(["FICUS",'','','',])
-# your_table.add_row(["SUCCULENT",'','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+# your_table.add_row(['','','','',])
+
+program_list = []
 
 # Object Data for Plant Class
 MONSTERA = Plant("monstera", 11, 365, True)
@@ -52,6 +64,7 @@ def update_plant_collection():
         if add_plant.upper() == "MONSTERA":
             print("\n You added MONSTERA! \n")
             your_table.add_row(["MONSTERA",'','','',])
+            program_list.append("MONSTERA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -59,6 +72,7 @@ def update_plant_collection():
         elif add_plant.upper() == "POTHOS":
             print("\n You added POTHOS! \n")
             your_table.add_row(["POTHOS",'','','',])
+            program_list.append("POTHOS")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -66,6 +80,7 @@ def update_plant_collection():
         elif add_plant.upper() == "PEACE LILY":
             print("\n You added PEACE LILY! \n")
             your_table.add_row(["PEACE LILY",'','','',])
+            program_list.append("PEACE LILY")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -73,6 +88,7 @@ def update_plant_collection():
         elif add_plant.upper() == "FICUS":
             print("\n You added FICUS! \n")
             your_table.add_row(["FICUS",'','','',])
+            program_list.append("FICUS")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -80,6 +96,7 @@ def update_plant_collection():
         elif add_plant.upper() == "SUCCULENT":
             print("\n You added SUCCULENT! \n")
             your_table.add_row(["SUCCULENT",'','','',])
+            program_list.append("SUCCULENT")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -87,6 +104,7 @@ def update_plant_collection():
         elif add_plant.upper() == "DRACAENA":
             print("\n You added DRACAENA! \n")
             your_table.add_row(["DRACAENA",'','','',])
+            program_list.append("DRACAENA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -94,6 +112,7 @@ def update_plant_collection():
         elif add_plant.upper() == "ALOE VERA":
             print("\n You added ALOE VERA! \n")
             your_table.add_row(["ALOE VERA",'','','',])
+            program_list.append("ALOE VERA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -101,6 +120,7 @@ def update_plant_collection():
         elif add_plant.upper() == "PEPEROMIA":
             print("\n You added PEPEROMIA! \n")
             your_table.add_row(["PEPEROMIA",'','','',])
+            program_list.append("PEPEROMIA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -108,6 +128,7 @@ def update_plant_collection():
         elif add_plant.upper() == "SNAKE PLANT":
             print("\n You added SNAKE PLANT! \n")
             your_table.add_row(["SNAKE PLANT",'','','',])
+            program_list.append("SNAKE PLANT")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -115,6 +136,7 @@ def update_plant_collection():
         elif add_plant.upper() == "TRADESCANTIA":
             print("\n You added TRADESCANTIA! \n")
             your_table.add_row(["TRADESCANTIA",'','','',])
+            program_list.append("TRADESCANTIA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -122,6 +144,7 @@ def update_plant_collection():
         elif add_plant.upper() == "CHINESE EVERGREEN":
             print("\n You added CHINESE EVERGREEN! \n")
             your_table.add_row(["CHINESE EVERGREEN",'','','',])
+            program_list.append("CHINESE EVERGREEN")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -129,6 +152,7 @@ def update_plant_collection():
         elif add_plant.upper() == "HOYA":
             print("\n You added HOYA! \n")
             your_table.add_row(["HOYA",'','','',])
+            program_list.append("HOYA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -136,6 +160,7 @@ def update_plant_collection():
         elif add_plant.upper() == "ANTHURIUM":
             print("\n You added ANTHURIUM! \n")
             your_table.add_row(["ANTHURIUM",'','','',])
+            program_list.append("ANTHURIUM")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -143,6 +168,7 @@ def update_plant_collection():
         elif add_plant.upper() == "PARLOR PALM":
             print("\n You added PARLOR PALM! \n")
             your_table.add_row(["PARLOR PALM",'','','',])
+            program_list.append("PARLOR PALM")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -150,10 +176,10 @@ def update_plant_collection():
         elif add_plant.upper() == "PHILODENDRON":
             print("\n You added PHILODENDRON! \n")
             your_table.add_row(["PHILODENDRON",'','','',])
+            program_list.append("PHILODENDRON")
             print(your_table)
             print(instructions)
             update_plant_collection()
-        
         
         else:
             print("\nIVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
@@ -288,226 +314,285 @@ input("\n\nPress ENTER to continue...\n\n")
 os.system("clear")
 
 print(your_table)
+print(program_list)
 
-print("\nTell me a little bit more about your " + (your_table.rows[0][0]) + "...\n")
+# print("\nTell me a little bit more about your " + (your_table.rows[0][0]) + "...\n")
 
-
-def fill_table_data():
-
-    row_one_data = []
-
-    if your_table.rows[0][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        add_plant_data = input("How many days since you last watered your " + (your_table.rows[0][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[0][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[0][0]) + " near a window? "))
-
+def fill_table_data_2():
+    row_one_data_2 = []
+    for plant in program_list:
+        print("\nTell me a little bit more about your " + plant + "...\n")
+        add_plant_data = input("How many days since you last watered your " + plant + "? ")
+        row_one_data_2.append(add_plant_data)
+        add_plant_data = (input("How many days since you last re-potted your " + plant + "? "))
+        row_one_data_2.append(add_plant_data)
+        add_plant_data = (input("Y or N, do you keep your " + plant + " near a window? "))
         if add_plant_data == "Y":
-            row_one_data.append(True)
-
+            row_one_data_2.append(True)
         elif add_plant_data == "N":
-            row_one_data.append(False)
+            row_one_data_2.append(False)
+        print(row_one_data_2)
+fill_table_data_2()
+
+# def fill_table_data():
+
+#     row_one_data = []
+
+#     if your_table.rows[0][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         add_plant_data = input("How many days since you last watered your " + (your_table.rows[0][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[0][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[0][0]) + " near a window? "))
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
         
-    if your_table.rows[1][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[1][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[1][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[1][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[1][0]) + " near a window? "))
+#     if your_table.rows[1][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[1][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[1][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[1][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[1][0]) + " near a window? "))
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
     
-    if your_table.rows[2][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[2][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[2][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[2][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[2][0]) + " near a window? "))
+#     if your_table.rows[2][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[2][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[2][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[2][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[2][0]) + " near a window? "))
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
 
-    if your_table.rows[3][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[3][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[3][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[3][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[3][0]) + " near a window? "))
+#     if your_table.rows[3][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[3][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[3][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[3][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[3][0]) + " near a window? "))
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
     
-    if your_table.rows[4][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[4][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[4][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[4][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[4][0]) + " near a window? "))
+#     if your_table.rows[4][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[4][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[4][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[4][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[4][0]) + " near a window? "))
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
     
-    if your_table.rows[5][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[5][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[5][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[5][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[5][0]) + " near a window? "))
+#     if your_table.rows[5][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[5][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[5][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[5][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[5][0]) + " near a window? "))
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
     
-    if your_table.rows[6][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[6][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[6][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[6][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[6][0]) + " near a window? \n"))
+#     if your_table.rows[6][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[6][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[6][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[6][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[6][0]) + " near a window? \n"))
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
     
-    if your_table.rows[7][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[7][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[7][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[7][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[7][0]) + " near a window? "))
+#     if your_table.rows[7][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[7][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[7][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[7][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[7][0]) + " near a window? "))
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+
+#     else:
+#         print(row_one_data)
     
-    if your_table.rows[8][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[8][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[8][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[8][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[8][0]) + " near a window? "))
+#     if your_table.rows[8][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[8][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[8][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[8][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[8][0]) + " near a window? "))
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
 
-    if your_table.rows[9][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[9][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[9][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[9][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[9][0]) + " near a window? "))
+#     else:
+#         print(row_one_data)
+        
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#     if your_table.rows[9][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[9][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[9][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[9][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[9][0]) + " near a window? "))
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
 
-    if your_table.rows[10][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[10][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[10][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[10][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[10][0]) + " near a window? "))
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#     if your_table.rows[10][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[10][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[10][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[10][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[10][0]) + " near a window? "))
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
+
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
+
+#     if your_table.rows[11][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[11][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[11][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[11][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[11][0]) + " near a window? "))
+
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
+
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
+
+#     if your_table.rows[12][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[12][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[12][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[12][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[12][0]) + " near a window? "))
+
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
+
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
+
+#     if your_table.rows[13][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[13][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[13][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[13][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[13][0]) + " near a window? "))
+
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
+
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
     
-    if your_table.rows[11][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[11][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[11][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[11][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[11][0]) + " near a window? "))
+#     if your_table.rows[14][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
+#         print("\n\nTell me a little bit more about your " + (your_table.rows[14][0]) + "...")
+#         add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[14][0]) + "? ")
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[14][0]) + "? "))
+#         row_one_data.append(add_plant_data)
+#         add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[14][0]) + " near a window? "))
 
-        if add_plant_data == "Y":
-            row_one_data.append(True)
+#         if add_plant_data == "Y":
+#             row_one_data.append(True)
 
-        elif add_plant_data == "N":
-            row_one_data.append(False)
-
-    if your_table.rows[12][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[12][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[12][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[12][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[12][0]) + " near a window? "))
-
-        if add_plant_data == "Y":
-            row_one_data.append(True)
-
-        elif add_plant_data == "N":
-            row_one_data.append(False)
-
-    if your_table.rows[13][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[13][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[13][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[13][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[13][0]) + " near a window? "))
-
-        if add_plant_data == "Y":
-            row_one_data.append(True)
-
-        elif add_plant_data == "N":
-            row_one_data.append(False)
-    
-    if your_table.rows[14][0] == "MONSTERA" or "POTHOS" or "PEACE LILY" or "FICUS" or "SUCCULENT" or "DRACAENA" or "ALOE VERA" or "PEPEROMIA" or "SNAKE PLANT" or "TRADESCANTIA" or "CHINESE EVERGREEN" or "HOYA" or "ANTHURIUM" or "PARLOR PALM" or "PHILODENDRON":
-        print("\n\nTell me a little bit more about your " + (your_table.rows[14][0]) + "...")
-        add_plant_data = input("\nHow many days since you last watered your " + (your_table.rows[14][0]) + "? ")
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + (your_table.rows[14][0]) + "? "))
-        row_one_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + (your_table.rows[14][0]) + " near a window? "))
-
-        if add_plant_data == "Y":
-            row_one_data.append(True)
-
-        elif add_plant_data == "N":
-            row_one_data.append(False)
+#         elif add_plant_data == "N":
+#             row_one_data.append(False)
+        
+#     else:
+#         print(row_one_data)
 
 
-        # print(row_one_data)
-        # fill_table_data()
+#         print(row_one_data)
+#         # fill_table_data()
         
         
-fill_table_data()
+# fill_table_data()
+
+# print(row_one_data)
