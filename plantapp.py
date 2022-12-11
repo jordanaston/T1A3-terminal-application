@@ -6,23 +6,9 @@ os.system("clear")
 
 # Prettytable data pre-filled
 your_table = PrettyTable(['Plant Name','No. Days Since Watered', 'No. Days Since Re-Pot','Near Window'])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
-# your_table.add_row(['','','','',])
 
-program_list = []
+# List to handle data behind scenes 
+program_plant_name_list = []
 
 # Object Data for Plant Class
 MONSTERA = Plant("monstera", 11, 365, True)
@@ -52,7 +38,6 @@ print("To get started, press 'A' to add your first plant to your collection. \n"
 
 # Instructions for user input
 instructions = "\nINSTRUCTIONS: \n1: Enter 'A' to ADD a new plant to your collection. \n2: Enter 'R' to REMOVE a plant from your collection. \n3. Enter 'F' to FINALISE your plant collection. \n "
-# print(instructions)
 
 # Function for adding and removing plants to the users plant collection.
 def update_plant_collection():
@@ -64,7 +49,7 @@ def update_plant_collection():
         if add_plant.upper() == "MONSTERA":
             print("\n You added MONSTERA! \n")
             your_table.add_row(["MONSTERA",'','','',])
-            program_list.append("MONSTERA")
+            program_plant_name_list.append("MONSTERA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -72,7 +57,7 @@ def update_plant_collection():
         elif add_plant.upper() == "POTHOS":
             print("\n You added POTHOS! \n")
             your_table.add_row(["POTHOS",'','','',])
-            program_list.append("POTHOS")
+            program_plant_name_list.append("POTHOS")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -80,7 +65,7 @@ def update_plant_collection():
         elif add_plant.upper() == "PEACE LILY":
             print("\n You added PEACE LILY! \n")
             your_table.add_row(["PEACE LILY",'','','',])
-            program_list.append("PEACE LILY")
+            program_plant_name_list.append("PEACE LILY")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -88,7 +73,7 @@ def update_plant_collection():
         elif add_plant.upper() == "FICUS":
             print("\n You added FICUS! \n")
             your_table.add_row(["FICUS",'','','',])
-            program_list.append("FICUS")
+            program_plant_name_list.append("FICUS")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -96,7 +81,7 @@ def update_plant_collection():
         elif add_plant.upper() == "SUCCULENT":
             print("\n You added SUCCULENT! \n")
             your_table.add_row(["SUCCULENT",'','','',])
-            program_list.append("SUCCULENT")
+            program_plant_name_list.append("SUCCULENT")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -104,7 +89,7 @@ def update_plant_collection():
         elif add_plant.upper() == "DRACAENA":
             print("\n You added DRACAENA! \n")
             your_table.add_row(["DRACAENA",'','','',])
-            program_list.append("DRACAENA")
+            program_plant_name_list.append("DRACAENA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -112,7 +97,7 @@ def update_plant_collection():
         elif add_plant.upper() == "ALOE VERA":
             print("\n You added ALOE VERA! \n")
             your_table.add_row(["ALOE VERA",'','','',])
-            program_list.append("ALOE VERA")
+            program_plant_name_list.append("ALOE VERA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -120,7 +105,7 @@ def update_plant_collection():
         elif add_plant.upper() == "PEPEROMIA":
             print("\n You added PEPEROMIA! \n")
             your_table.add_row(["PEPEROMIA",'','','',])
-            program_list.append("PEPEROMIA")
+            program_plant_name_list.append("PEPEROMIA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -128,7 +113,7 @@ def update_plant_collection():
         elif add_plant.upper() == "SNAKE PLANT":
             print("\n You added SNAKE PLANT! \n")
             your_table.add_row(["SNAKE PLANT",'','','',])
-            program_list.append("SNAKE PLANT")
+            program_plant_name_list.append("SNAKE PLANT")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -136,7 +121,7 @@ def update_plant_collection():
         elif add_plant.upper() == "TRADESCANTIA":
             print("\n You added TRADESCANTIA! \n")
             your_table.add_row(["TRADESCANTIA",'','','',])
-            program_list.append("TRADESCANTIA")
+            program_plant_name_list.append("TRADESCANTIA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -144,7 +129,7 @@ def update_plant_collection():
         elif add_plant.upper() == "CHINESE EVERGREEN":
             print("\n You added CHINESE EVERGREEN! \n")
             your_table.add_row(["CHINESE EVERGREEN",'','','',])
-            program_list.append("CHINESE EVERGREEN")
+            program_plant_name_list.append("CHINESE EVERGREEN")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -152,7 +137,7 @@ def update_plant_collection():
         elif add_plant.upper() == "HOYA":
             print("\n You added HOYA! \n")
             your_table.add_row(["HOYA",'','','',])
-            program_list.append("HOYA")
+            program_plant_name_list.append("HOYA")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -160,7 +145,7 @@ def update_plant_collection():
         elif add_plant.upper() == "ANTHURIUM":
             print("\n You added ANTHURIUM! \n")
             your_table.add_row(["ANTHURIUM",'','','',])
-            program_list.append("ANTHURIUM")
+            program_plant_name_list.append("ANTHURIUM")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -168,7 +153,7 @@ def update_plant_collection():
         elif add_plant.upper() == "PARLOR PALM":
             print("\n You added PARLOR PALM! \n")
             your_table.add_row(["PARLOR PALM",'','','',])
-            program_list.append("PARLOR PALM")
+            program_plant_name_list.append("PARLOR PALM")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -176,7 +161,7 @@ def update_plant_collection():
         elif add_plant.upper() == "PHILODENDRON":
             print("\n You added PHILODENDRON! \n")
             your_table.add_row(["PHILODENDRON",'','','',])
-            program_list.append("PHILODENDRON")
+            program_plant_name_list.append("PHILODENDRON")
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -307,32 +292,46 @@ def update_plant_collection():
 
 update_plant_collection()
 
+# Shows user their final plant collection 
 print(your_table)
 print("\nThe above table is your final collection.\n")
 
 input("\n\nPress ENTER to continue...\n\n")
 os.system("clear")
 
+
+# Gets plant data from user (last water,last re-pot,location) and stores data in a list
 print(your_table)
-print(program_list)
+plant_data = []
+for plant in program_plant_name_list:
+    print("\nTell me a little bit more about your " + plant + "...\n")
+    add_plant_data = input("How many days since you last watered your " + plant + "? ")
+    plant_data.append(add_plant_data)
+    add_plant_data = (input("How many days since you last re-potted your " + plant + "? "))
+    plant_data.append(add_plant_data)
+    add_plant_data = (input("Y or N, do you keep your " + plant + " near a window? "))
+    if add_plant_data.upper() == "Y":
+        plant_data.append(True)
+    elif add_plant_data.upper() == "N":
+        plant_data.append(False)
+    else:
+        print("\nIVALID SELECTION! Please select 'Y' or 'N' \n")
+print(plant_data)
 
-# print("\nTell me a little bit more about your " + (your_table.rows[0][0]) + "...\n")
 
-def fill_table_data_2():
-    row_one_data_2 = []
-    for plant in program_list:
-        print("\nTell me a little bit more about your " + plant + "...\n")
-        add_plant_data = input("How many days since you last watered your " + plant + "? ")
-        row_one_data_2.append(add_plant_data)
-        add_plant_data = (input("How many days since you last re-potted your " + plant + "? "))
-        row_one_data_2.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + plant + " near a window? "))
-        if add_plant_data == "Y":
-            row_one_data_2.append(True)
-        elif add_plant_data == "N":
-            row_one_data_2.append(False)
-        print(row_one_data_2)
-fill_table_data_2()
+
+# Merging list of plant data with list of plant names to create a dictionary
+print(plant_data[3:6])
+
+
+
+
+
+
+
+
+
+# PROBABLY DELETE ALL OF THIS FOR DRY
 
 # def fill_table_data():
 
