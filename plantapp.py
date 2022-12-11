@@ -15,21 +15,21 @@ program_plant_name_list = []
 program_plant_data_list = []
 
 # Object Data for Plant Class
-MONSTERA = Plant("monstera", 11, 365, True)
-POTHOS = Plant("pothos", 7, 365, False)
-PEACE_LILY = Plant("peace lily", 7, 730, False)
-FICUS = Plant("ficus", 5, 730, True)
-SUCCULENT = Plant("succulent", 3, 730, True)
-DRACAENA = Plant("dracaena", 12, 1460, False)
-ALOE_VERA = Plant("aloe vera", 18, 1095, True)
-PEPEROMIA = Plant("peperomia", 10, 730, True)
-SNAKE_PLANT = Plant("snake plant", 7, 2555, True)
-TRADESCANTIA = Plant("tradescantia", 7, 356, False)
-CHINESE_EVERGREEN = Plant("chinese evergreen", 8, 730, True)
-HOYA = Plant("hoya", 14, 2190, False)
-ANTHURIUM = Plant("anthurium", 7, 730, False)
-PARLOR_PALM = Plant("palor palm", 7, 1095, False)
-PHILODENDRON = Plant("philodendron", 11, 1095, True)
+MONSTERA = Plant("MONSTERA", 11, 365, True)
+POTHOS = Plant("POTHOS", 7, 365, False)
+PEACE_LILY = Plant("PEACE_LILY", 7, 730, False)
+FICUS = Plant("FICUS", 5, 730, True)
+SUCCULENT = Plant("SUCCULENT", 3, 730, True)
+DRACAENA = Plant("DRACAENA", 12, 1460, False)
+ALOE_VERA = Plant("ALOE_VERA", 18, 1095, True)
+PEPEROMIA = Plant("PEPEROMIA", 10, 730, True)
+SNAKE_PLANT = Plant("SNAKE_PLANT", 7, 2555, True)
+TRADESCANTIA = Plant("TRADESCANTIA", 7, 356, False)
+CHINESE_EVERGREEN = Plant("CHINESE_EVERGREEN", 8, 730, True)
+HOYA = Plant("HOYA", 14, 2190, False)
+ANTHURIUM = Plant("ANTHURIUM", 7, 730, False)
+PARLOR_PALM = Plant("PARLOR_PALM", 7, 1095, False)
+PHILODENDRON = Plant("PHILODENDRON", 11, 1095, True)
 
 # Introduction to the app
 print("\n\nWelcome to PLANTAPP. \n")
@@ -303,7 +303,6 @@ print("\nThe above table is your final collection.\n")
 input("\n\nPress ENTER to continue...\n\n")
 os.system("clear")
 
-
 # Gets plant data from user (last water,last re-pot,location) and stores data in a list
 print(your_table)
 plant_data = []
@@ -322,11 +321,9 @@ for plant in program_plant_name_list:
         print("\nIVALID SELECTION! Please select 'Y' or 'N' \n")
 print(plant_data)
 
-
-
-# Extrapolate data from each plant. Getting the first, second and third item then the third item that follows each of those items.
+# Extrapolate data from each plant. Getting each block of 3 list items from "plant_data", 
+# storing them in lists then storing all of those lists inside a big list.
 # This is so we can merge that data into a dictionary. EG: {'MONSTERA': [3, 185, True]}  
-
 first_plant_list = []
 second_plant_list = []
 third_plant_list = []
@@ -407,7 +404,6 @@ for data in plant_data[42:45]:
     fifteenth_plant_list.append(data)
 
 
-print("TESTING")
-
+# ZIPS all the plants names from the user with all the plant data from the user together to create a DICT for comparing with plant class data
 all_user_plant_data = dict(zip(program_plant_name_list, user_plant_data_list))
 print(all_user_plant_data)
