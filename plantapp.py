@@ -181,6 +181,7 @@ def update_plant_collection():
         if remove_plant == "1":
             print("\n You removed PLANT 1 from your collection. \n")
             your_table.del_row(0)
+            program_plant_name_list.remove(program_plant_name_list[0])
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -188,6 +189,7 @@ def update_plant_collection():
         elif remove_plant == "2":
             print("\n You removed PLANT 2 from your collection. \n")
             your_table.del_row(1)
+            program_plant_name_list.remove(program_plant_name_list[1])
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -195,6 +197,7 @@ def update_plant_collection():
         elif remove_plant == "3":
             print("\n You removed PLANT 3 from your collection. \n")
             your_table.del_row(2)
+            program_plant_name_list.remove(program_plant_name_list[2])
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -202,6 +205,7 @@ def update_plant_collection():
         elif remove_plant == "4":
             print("\n You removed PLANT 4 from your collection. \n")
             your_table.del_row(3)
+            program_plant_name_list.remove(program_plant_name_list[3])
             print(your_table)
             print(instructions)
             update_plant_collection()
@@ -209,6 +213,7 @@ def update_plant_collection():
         elif remove_plant == "5":
             print("\n You removed PLANT 5 from your collection. \n")
             your_table.del_row(4)
+            program_plant_name_list.remove(program_plant_name_list[4])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -216,6 +221,7 @@ def update_plant_collection():
         elif remove_plant == "6":
             print("\n You removed PLANT 6 from your collection. \n")
             your_table.del_row(5)
+            program_plant_name_list.remove(program_plant_name_list[5])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -223,6 +229,7 @@ def update_plant_collection():
         elif remove_plant == "7":
             print("\n You removed PLANT 7 from your collection. \n")
             your_table.del_row(6)
+            program_plant_name_list.remove(program_plant_name_list[6])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -230,6 +237,7 @@ def update_plant_collection():
         elif remove_plant == "8":
             print("\n You removed PLANT 8 from your collection. \n")
             your_table.del_row(7)
+            program_plant_name_list.remove(program_plant_name_list[7])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -237,6 +245,7 @@ def update_plant_collection():
         elif remove_plant == "9":
             print("\n You removed PLANT 9 from your collection. \n")
             your_table.del_row(8)
+            program_plant_name_list.remove(program_plant_name_list[8])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -244,6 +253,7 @@ def update_plant_collection():
         elif remove_plant == "10":
             print("\n You removed PLANT 10 from your collection. \n")
             your_table.del_row(9)
+            program_plant_name_list.remove(program_plant_name_list[9])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -251,6 +261,7 @@ def update_plant_collection():
         elif remove_plant == "11":
             print("\n You removed PLANT 11 from your collection. \n")
             your_table.del_row(10)
+            program_plant_name_list.remove(program_plant_name_list[10])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -258,6 +269,7 @@ def update_plant_collection():
         elif remove_plant == "12":
             print("\n You removed PLANT 12 from your collection. \n")
             your_table.del_row(11)
+            program_plant_name_list.remove(program_plant_name_list[11])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -265,6 +277,7 @@ def update_plant_collection():
         elif remove_plant == "13":
             print("\n You removed PLANT 13 from your collection. \n")
             your_table.del_row(12)
+            program_plant_name_list.remove(program_plant_name_list[12])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -272,6 +285,7 @@ def update_plant_collection():
         elif remove_plant == "14":
             print("\n You removed PLANT 14 from your collection. \n")
             your_table.del_row(13)
+            program_plant_name_list.remove(program_plant_name_list[13])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -279,6 +293,7 @@ def update_plant_collection():
         elif remove_plant == "15":
             print("\n You removed PLANT 15 from your collection. \n")
             your_table.del_row(14)
+            program_plant_name_list.remove(program_plant_name_list[14])
             print(your_table)
             print(instructions)
             update_plant_collection()  
@@ -308,9 +323,9 @@ print(your_table)
 plant_data = []
 for plant in program_plant_name_list:
     print("\nTell me a little bit more about your " + plant + "...\n")
-    add_plant_data = input("How many days since you last watered your " + plant + "? ")
+    add_plant_data = int(input("How many days since you last watered your " + plant + "? "))
     plant_data.append(add_plant_data)
-    add_plant_data = (input("How many days since you last re-potted your " + plant + "? "))
+    add_plant_data = int(input("How many days since you last re-potted your " + plant + "? "))
     plant_data.append(add_plant_data)
     add_plant_data = (input("Y or N, do you keep your " + plant + " near a window? "))
     if add_plant_data.upper() == "Y":
@@ -319,7 +334,6 @@ for plant in program_plant_name_list:
         plant_data.append(False)
     else:
         print("\nIVALID SELECTION! Please select 'Y' or 'N' \n")
-print(plant_data)
 
 # Extrapolate data from each plant. Getting each block of 3 list items from "plant_data", 
 # storing them in lists then storing all of those lists inside a big list.
@@ -406,4 +420,5 @@ for data in plant_data[42:45]:
 
 # ZIPS all the plants names from the user with all the plant data from the user together to create a DICT for comparing with plant class data
 all_user_plant_data = dict(zip(program_plant_name_list, user_plant_data_list))
+print("\n\n")
 print(all_user_plant_data)
