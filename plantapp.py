@@ -320,8 +320,22 @@ print(plant_data)
 
 
 
-# Merging list of plant data with list of plant names to create a dictionary
-print(plant_data[3:6])
+# Extrapolate data from each plant. Getting the first, second and third item then the third item that follows each of those items.
+# This is so we can merge that data into a dictionary. EG: MONSTERA: 3, 185, True
+print(program_plant_name_list)
+
+for data in plant_data[0::3]:
+    print(data)
+
+for data in plant_data[1::3]:
+    print(data)
+
+for data in plant_data[2::3]:
+    print(data)
+
+
+    
+
 
 
 
