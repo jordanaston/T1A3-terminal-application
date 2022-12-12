@@ -41,6 +41,7 @@ print(r"""
   / /_/ / / /  / /_/ /  / / / // /_         / /_/ /   / /_/ /  / /_/ / _
  / .___/ /_/   \__,_/  /_/ /_/ \__/         \__,_/   / .___/  / .___/ (_)
 /_/                                                 /_/      /_/
+
 """)
 
 print("\n\nWelcome to PLANTAPP. \n")
@@ -324,7 +325,6 @@ update_plant_collection()
 
 # Shows user their final plant collection 
 print(your_table)
-print("\nThe above table is your final collection.\n")
 
 input("\n\nPress ENTER to continue...\n\n")
 os.system("clear")
@@ -431,12 +431,11 @@ for data in plant_data[42:45]:
 
 # ZIPS all the plants names from the user with all the plant data from the user together to create a DICT for comparing with plant class data
 all_user_plant_data = dict(zip(program_plant_name_list, user_plant_data_list))
-print("\n\n")
 # print(all_user_plant_data)
-print("\n\n")
+print("\n")
 
 print("\nThanks for all the data! \n")
-input("\n\nPress ENTER to continue...\n\n")
+input("\nPress ENTER to continue...\n\n")
 os.system("clear")
 
 # def add_user_plant_data_to_prettytable():
@@ -446,10 +445,292 @@ print(your_table)
 
 print("\n\nBased on the details you've submitted, here's what we recommend! \n\n")
 
-def recommendations():
-    if "MONSTERA" in all_user_plant_data.keys():
-        print(all_user_plant_data)
-    else:
-        print("Not in collection...")
 
-recommendations()
+def watering_recommendations():
+    if "MONSTERA" in all_user_plant_data.keys():
+        if all_user_plant_data["MONSTERA"][0] == getattr(MONSTERA, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...") 
+
+    if "POTHOS" in all_user_plant_data.keys():
+        if all_user_plant_data["POTHOS"][0] == getattr(POTHOS, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "PEACE LILY" in all_user_plant_data.keys():
+        if all_user_plant_data["PEACE LILY"][0] == getattr(PEACE_LILY, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")  
+
+    if "FICUS" in all_user_plant_data.keys():
+        if all_user_plant_data["FICUS"][0] == getattr(FICUS, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "SUCCULENT" in all_user_plant_data.keys():
+        if all_user_plant_data["SUCCULENT"][0] == getattr(SUCCULENT, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "DRACAENA" in all_user_plant_data.keys():
+        if all_user_plant_data["DRACAENA"][0] == getattr(DRACAENA, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "ALOE VERA" in all_user_plant_data.keys():
+        if all_user_plant_data["ALOE VERA"][0] == getattr(ALOE_VERA, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "PEPEROMIA" in all_user_plant_data.keys():
+        if all_user_plant_data["PEPEROMIA"][0] == getattr(PEPEROMIA, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "SNAKE PLANT" in all_user_plant_data.keys():
+        if all_user_plant_data["SNAKE PLANT"][0] == getattr(SNAKE_PLANT, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "TRADESCANTIA" in all_user_plant_data.keys():
+        if all_user_plant_data["TRADESCANTIA"][0] == getattr(TRADESCANTIA, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "CHINESE EVERGREEN" in all_user_plant_data.keys():
+        if all_user_plant_data["CHINESE EVERGREEN"][0] == getattr(CHINESE_EVERGREEN, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "HOYA" in all_user_plant_data.keys():
+        if all_user_plant_data["HOYA"][0] == getattr(HOYA, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "ANTHURIUM" in all_user_plant_data.keys():
+        if all_user_plant_data["ANTHURIUM"][0] == getattr(ANTHURIUM, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "PARLOR PALM" in all_user_plant_data.keys():
+        if all_user_plant_data["PARLOR PALM"][0] == getattr(PARLOR_PALM, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "PHILODENDRON" in all_user_plant_data.keys():
+        if all_user_plant_data["PHILODENDRON"][0] == getattr(PHILODENDRON, "water_freq"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+watering_recommendations()
+
+
+
+
+
+
+def repotting_recommendations():
+    if "MONSTERA" in all_user_plant_data.keys():
+        if all_user_plant_data["MONSTERA"][1] == getattr(MONSTERA, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...") 
+
+    if "POTHOS" in all_user_plant_data.keys():
+        if all_user_plant_data["POTHOS"][1] == getattr(POTHOS, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "PEACE LILY" in all_user_plant_data.keys():
+        if all_user_plant_data["PEACE LILY"][1] == getattr(PEACE_LILY, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")  
+
+    if "FICUS" in all_user_plant_data.keys():
+        if all_user_plant_data["FICUS"][1] == getattr(FICUS, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "SUCCULENT" in all_user_plant_data.keys():
+        if all_user_plant_data["SUCCULENT"][1] == getattr(SUCCULENT, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "DRACAENA" in all_user_plant_data.keys():
+        if all_user_plant_data["DRACAENA"][1] == getattr(DRACAENA, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "ALOE VERA" in all_user_plant_data.keys():
+        if all_user_plant_data["ALOE VERA"][1] == getattr(ALOE_VERA, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "PEPEROMIA" in all_user_plant_data.keys():
+        if all_user_plant_data["PEPEROMIA"][1] == getattr(PEPEROMIA, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "SNAKE PLANT" in all_user_plant_data.keys():
+        if all_user_plant_data["SNAKE PLANT"][1] == getattr(SNAKE_PLANT, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "TRADESCANTIA" in all_user_plant_data.keys():
+        if all_user_plant_data["TRADESCANTIA"][1] == getattr(TRADESCANTIA, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "CHINESE EVERGREEN" in all_user_plant_data.keys():
+        if all_user_plant_data["CHINESE EVERGREEN"][1] == getattr(CHINESE_EVERGREEN, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "HOYA" in all_user_plant_data.keys():
+        if all_user_plant_data["HOYA"][1] == getattr(HOYA, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "ANTHURIUM" in all_user_plant_data.keys():
+        if all_user_plant_data["ANTHURIUM"][1] == getattr(ANTHURIUM, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "PARLOR PALM" in all_user_plant_data.keys():
+        if all_user_plant_data["PARLOR PALM"][1] == getattr(PARLOR_PALM, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+    if "PHILODENDRON" in all_user_plant_data.keys():
+        if all_user_plant_data["PHILODENDRON"][1] == getattr(PHILODENDRON, "repot_freq"):
+            print("repot Cool this is equal!")
+        else:
+            print("repot This is not equal...")
+
+repotting_recommendations()
+
+
+
+
+
+
+def location_recommendations():
+    if "MONSTERA" in all_user_plant_data.keys():
+        if all_user_plant_data["MONSTERA"][2] == getattr(MONSTERA, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...") 
+
+    if "POTHOS" in all_user_plant_data.keys():
+        if all_user_plant_data["POTHOS"][2] == getattr(POTHOS, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "PEACE LILY" in all_user_plant_data.keys():
+        if all_user_plant_data["PEACE LILY"][2] == getattr(PEACE_LILY, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")  
+
+    if "FICUS" in all_user_plant_data.keys():
+        if all_user_plant_data["FICUS"][2] == getattr(FICUS, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "SUCCULENT" in all_user_plant_data.keys():
+        if all_user_plant_data["SUCCULENT"][2] == getattr(SUCCULENT, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "DRACAENA" in all_user_plant_data.keys():
+        if all_user_plant_data["DRACAENA"][2] == getattr(DRACAENA, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "ALOE VERA" in all_user_plant_data.keys():
+        if all_user_plant_data["ALOE VERA"][2] == getattr(ALOE_VERA, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "PEPEROMIA" in all_user_plant_data.keys():
+        if all_user_plant_data["PEPEROMIA"][2] == getattr(PEPEROMIA, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "SNAKE PLANT" in all_user_plant_data.keys():
+        if all_user_plant_data["SNAKE PLANT"][2] == getattr(SNAKE_PLANT, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "TRADESCANTIA" in all_user_plant_data.keys():
+        if all_user_plant_data["TRADESCANTIA"][2] == getattr(TRADESCANTIA, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "CHINESE EVERGREEN" in all_user_plant_data.keys():
+        if all_user_plant_data["CHINESE EVERGREEN"][2] == getattr(CHINESE_EVERGREEN, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "HOYA" in all_user_plant_data.keys():
+        if all_user_plant_data["HOYA"][2] == getattr(HOYA, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "ANTHURIUM" in all_user_plant_data.keys():
+        if all_user_plant_data["ANTHURIUM"][2] == getattr(ANTHURIUM, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "PARLOR PALM" in all_user_plant_data.keys():
+        if all_user_plant_data["PARLOR PALM"][2] == getattr(PARLOR_PALM, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+    if "PHILODENDRON" in all_user_plant_data.keys():
+        if all_user_plant_data["PHILODENDRON"][2] == getattr(PHILODENDRON, "near_window"):
+            print("Cool this is equal!")
+        else:
+            print("This is not equal...")
+
+location_recommendations()
