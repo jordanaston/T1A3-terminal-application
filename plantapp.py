@@ -334,7 +334,7 @@ os.system("clear")
 print(your_table)
 plant_data = []
 for plant in program_plant_name_list:
-    print("\nTell me a little bit more about your " + plant + "...\n")
+    print("\n\nTell me a little bit more about your " + plant + "...\n")
     add_plant_data = int(input("How many days since you last watered your " + plant + "? "))
     plant_data.append(add_plant_data)
     add_plant_data = int(input("How many days since you last re-potted your " + plant + "? "))
@@ -447,8 +447,6 @@ print(your_table)
 print("\n\nBased on the details you've submitted, here is some handy information! \n\n")
 
 
-print("\nTESTING\n")
-
 def reccomendations():
     for key in all_user_plant_data.keys():
         if key == "MONSTERA":
@@ -483,26 +481,26 @@ def reccomendations():
             PLANTDATA = Plant("PHILODENDRON", 11, 1095, True)
 
         if all_user_plant_data[key][0] > getattr(PLANTDATA, "water_freq"):
-            print("You're overdue on watering your " + key + " by " + str(((all_user_plant_data[key][0])) - ((getattr(PLANTDATA, "water_freq")))) + " days!")
+            print("You're overdue on watering your " + key + " by " + str(((all_user_plant_data[key][0])) - ((getattr(PLANTDATA, "water_freq")))) + " days!\n")
         elif all_user_plant_data[key][0] == getattr(PLANTDATA, "water_freq"):
-            print("Today's the day to water your " + key + " ! ")
+            print("Today's the day to water your " + key + " ! \n")
         else:
-            print("No need to stress!, you have " + str(((getattr(PLANTDATA, "water_freq"))) - ((all_user_plant_data[key][0]))) + " days to water your " + key + "!")
+            print("No need to stress!, you have " + str(((getattr(PLANTDATA, "water_freq"))) - ((all_user_plant_data[key][0]))) + " days to water your " + key + "! \n")
 
         if all_user_plant_data[key][1] > getattr(PLANTDATA, "repot_freq"):
-                print("You're overdue on repotting your " + key + " by " + str(((all_user_plant_data[key][1])) - ((getattr(PLANTDATA, "repot_freq")))) + " days!")
+                print("You're overdue on repotting your " + key + " by " + str(((all_user_plant_data[key][1])) - ((getattr(PLANTDATA, "repot_freq")))) + " days! \n")
         elif all_user_plant_data[key][1] == getattr(PLANTDATA, "repot_freq"):
-            print("Today's the day to repot your " + key + " ! ")
+            print("Today's the day to repot your " + key + " ! \n")
         else:
-            print("You've got time!, you should re-pot your " + key + " in about " + str(((getattr(PLANTDATA, "repot_freq"))) - ((all_user_plant_data[key][1]))) + " days!")
+            print("You've got time!, you should re-pot your " + key + " in about " + str(((getattr(PLANTDATA, "repot_freq"))) - ((all_user_plant_data[key][1]))) + " days! \n")
 
         if all_user_plant_data[key][2] and getattr(PLANTDATA, "near_window"):
-                print("Your " + key + " is near a window, this is good!")
+                print("Your " + key + " is near a window, this is good!\n")
         elif not all_user_plant_data[key][2] and getattr(PLANTDATA, "near_window"):
-            print("Your " + key + " is not near a window, this is bad!")
+            print("Your " + key + " is not near a window, this is bad!\n")
         elif all_user_plant_data[key][2] and not getattr(PLANTDATA, "near_window"):
-            print("Your " + key + " is near a window, this is bad!")
+            print("Your " + key + " is near a window, this is bad!\n")
         else:
-            print("Your " + key + " is not near a window, this is good!")
+            print("Your " + key + " is not near a window, this is good!\n")
 
 reccomendations()
