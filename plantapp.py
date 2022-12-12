@@ -7,7 +7,7 @@ os.system("clear")
 
 # Prettytable data pre-filled
 # your_table = PrettyTable(['Plant Name','No. Days Since Watered', 'No. Days Since Re-Pot','Near Window'])
-your_table = PrettyTable(['Your Plant Collection',])
+your_table = PrettyTable(['Your Plant Collection 🌱',])
 
 # List to handle data behind scenes 
 program_plant_name_list = []
@@ -33,6 +33,16 @@ PARLOR_PALM = Plant("PARLOR_PALM", 7, 1095, False)
 PHILODENDRON = Plant("PHILODENDRON", 11, 1095, True)
 
 # Introduction to the app
+
+print(r"""  
+             __                   __                                   
+    ____    / /  ____ _   ____   / /_         ____ _    ____     ____   
+   / __ \  / /  / __ `/  / __ \ / __/        / __ `/   / __ \   / __ \ 
+  / /_/ / / /  / /_/ /  / / / // /_         / /_/ /   / /_/ /  / /_/ / _
+ / .___/ /_/   \__,_/  /_/ /_/ \__/         \__,_/   / .___/  / .___/ (_)
+/_/                                                 /_/      /_/
+""")
+
 print("\n\nWelcome to PLANTAPP. \n")
 print("This app is designed to assist you with some basic care taking of your indoor house-plants. \n")
 print("Currently, this app supports the following popular indoor house-plants: \n\nMONSTERA\nPOTHOS\nPEACE LILY\nFICUS\nSUCCULENT\nDRACAENA\nALOE VERA\nPEPEROMIA\nSNAKE PLANT\nTRADESCANTIA\nCHINESE EVERGREEN\nHOYA\nANTHURIUM\nPARLOR PALM\nPHILODENDRON\n")
@@ -422,7 +432,7 @@ for data in plant_data[42:45]:
 # ZIPS all the plants names from the user with all the plant data from the user together to create a DICT for comparing with plant class data
 all_user_plant_data = dict(zip(program_plant_name_list, user_plant_data_list))
 print("\n\n")
-print(all_user_plant_data)
+# print(all_user_plant_data)
 print("\n\n")
 
 print("\nThanks for all the data! \n")
@@ -433,3 +443,13 @@ os.system("clear")
 #         your_table.add_row(first_plant_list)
 
 print(your_table)
+
+print("\n\nBased on the details you've submitted, here's what we recommend! \n\n")
+
+def recommendations():
+    if "MONSTERA" in all_user_plant_data.keys():
+        print(all_user_plant_data)
+    else:
+        print("Not in collection...")
+
+recommendations()
