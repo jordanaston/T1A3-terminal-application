@@ -128,7 +128,7 @@ def update_plant_collection():
         if remove_plant <= len(program_plant_name_list):
                 print("\n You removed PLANT in position " + (str(remove_plant)) + " from your collection. \n")
                 your_table.del_row(int(remove_plant))
-                # program_plant_name_list.remove(remove_plant.upper())
+                program_plant_name_list.remove(program_plant_name_list[remove_plant])
                 print(your_table)
                 print(instructions)
                 update_plant_collection()
