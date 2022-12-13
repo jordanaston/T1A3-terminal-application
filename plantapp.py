@@ -1,9 +1,14 @@
 from prettytable import PrettyTable
+import numpy as np
+from random import randint
+import pandas
+from requests import get
 from plantclass import Plant
 from plantclass import userPlant
 import os
 
 os.system("clear")
+
 
 # Prettytable data pre-filled
 # your_table = PrettyTable(['Plant Name','No. Days Since Watered', 'No. Days Since Re-Pot','Near Window'])
@@ -45,13 +50,15 @@ print(r"""
 
 """)
 
-print("\n\nWelcome to PLANTAPP. \n")
-print("This app is designed to assist you with some basic care taking of your indoor house-plants. \n")
-print("Currently, this app supports the following popular indoor house-plants: \n\nMONSTERA\nPOTHOS\nPEACE LILY\nFICUS\nSUCCULENT\nDRACAENA\nALOE VERA\nPEPEROMIA\nSNAKE PLANT\nTRADESCANTIA\nCHINESE EVERGREEN\nHOYA\nANTHURIUM\nPARLOR PALM\nPHILODENDRON\n")
-print("If you have any plants outside of this list, please come back another time when our list is updated! \nBut for now, let's help you out with what we support :) \n")
-input("\n\nPress ENTER to continue...\n\n")
-os.system("clear")
-print("To get started, press 'A' to add your first plant to your collection. \n")
+def introduction():
+    print("\n\nWelcome to PLANTAPP. \n")
+    print("This app is designed to assist you with some basic care taking of your indoor house-plants. \n")
+    print("Currently, this app supports the following popular indoor house-plants: \n\nMONSTERA\nPOTHOS\nPEACE LILY\nFICUS\nSUCCULENT\nDRACAENA\nALOE VERA\nPEPEROMIA\nSNAKE PLANT\nTRADESCANTIA\nCHINESE EVERGREEN\nHOYA\nANTHURIUM\nPARLOR PALM\nPHILODENDRON\n")
+    print("If you have any plants outside of this list, please come back another time when our list is updated! \nBut for now, let's help you out with what we support :) \n")
+    input("\n\nPress ENTER to continue...\n\n")
+    os.system("clear")
+    print("To get started, press 'A' to add a plant to your collection. \n")
+introduction()
 
 # Instructions for user input
 instructions = "\nINSTRUCTIONS: \n1: Enter 'A' to ADD a new plant to your collection. \n2: Enter 'R' to REMOVE a plant from your collection. \n3. Enter 'F' to FINALISE your plant collection. \n "
@@ -333,19 +340,22 @@ os.system("clear")
 # Gets plant data from user (last water,last re-pot,location) and stores data in a list
 print(your_table)
 plant_data = []
-for plant in program_plant_name_list:
-    print("\n\nTell me a little bit more about your " + plant + "...\n")
-    add_plant_data = int(input("How many days since you last watered your " + plant + "? "))
-    plant_data.append(add_plant_data)
-    add_plant_data = int(input("How many days since you last re-potted your " + plant + "? "))
-    plant_data.append(add_plant_data)
-    add_plant_data = (input("Y or N, do you keep your " + plant + " near a window? "))
-    if add_plant_data.upper() == "Y":
-        plant_data.append(True)
-    elif add_plant_data.upper() == "N":
-        plant_data.append(False)
-    else:
-        print("\nIVALID SELECTION! Please select 'Y' or 'N' \n")
+
+def get_user_plant_data():
+    for plant in program_plant_name_list:
+        print("\n\nTell me a little bit more about your " + plant + "...\n")
+        add_plant_data = int(input("How many days since you last watered your " + plant + "? "))
+        plant_data.append(add_plant_data)
+        add_plant_data = int(input("How many days since you last re-potted your " + plant + "? "))
+        plant_data.append(add_plant_data)
+        add_plant_data = (input("Y or N, do you keep your " + plant + " near a window? "))
+        if add_plant_data.upper() == "Y":
+            plant_data.append(True)
+        elif add_plant_data.upper() == "N":
+            plant_data.append(False)
+        else:
+            print("\nIVALID SELECTION! Please select 'Y' or 'N' \n")
+get_user_plant_data()
 
 # Extrapolate data from each plant. Getting each block of 3 list items from "plant_data", 
 # storing them in lists then storing all of those lists inside a big list.
@@ -384,51 +394,52 @@ user_plant_data_list = [
     fifteenth_plant_list
 ]
 
-for data in plant_data[0:3]:
-    first_plant_list.append(data)
+def add_data_to_lists():
+    for data in plant_data[0:3]:
+        first_plant_list.append(data)
 
-for data in plant_data[3:6]:
-    second_plant_list.append(data)
+    for data in plant_data[3:6]:
+        second_plant_list.append(data)
 
-for data in plant_data[6:9]:
-    third_plant_list.append(data)
+    for data in plant_data[6:9]:
+        third_plant_list.append(data)
 
-for data in plant_data[9:12]:
-    fourth_plant_list.append(data)
+    for data in plant_data[9:12]:
+        fourth_plant_list.append(data)
 
-for data in plant_data[12:15]:
-    fifth_plant_list.append(data)
+    for data in plant_data[12:15]:
+        fifth_plant_list.append(data)
 
-for data in plant_data[15:18]:
-    sixth_plant_list.append(data)
+    for data in plant_data[15:18]:
+        sixth_plant_list.append(data)
 
-for data in plant_data[18:21]:
-    seventh_plant_list.append(data)
+    for data in plant_data[18:21]:
+        seventh_plant_list.append(data)
 
-for data in plant_data[21:24]:
-    eighth_plant_list.append(data)
+    for data in plant_data[21:24]:
+        eighth_plant_list.append(data)
 
-for data in plant_data[24:27]:
-    ninth_plant_list.append(data)
+    for data in plant_data[24:27]:
+        ninth_plant_list.append(data)
 
-for data in plant_data[27:30]:
-    tenth_plant_list.append(data)
-        
-for data in plant_data[30:33]:
-    eleventh_plant_list.append(data)
+    for data in plant_data[27:30]:
+        tenth_plant_list.append(data)
+            
+    for data in plant_data[30:33]:
+        eleventh_plant_list.append(data)
 
-for data in plant_data[33:36]:
-    twelfth_plant_list.append(data)
+    for data in plant_data[33:36]:
+        twelfth_plant_list.append(data)
 
-for data in plant_data[36:39]:
-    thirteenth_plant_list.append(data)
+    for data in plant_data[36:39]:
+        thirteenth_plant_list.append(data)
 
-for data in plant_data[39:42]:
-    fourteenth_plant_list.append(data)
+    for data in plant_data[39:42]:
+        fourteenth_plant_list.append(data)
 
-for data in plant_data[42:45]:
-    fifteenth_plant_list.append(data)
-
+    for data in plant_data[42:45]:
+        fifteenth_plant_list.append(data)
+add_data_to_lists()
 
 # ZIPS all the plants names from the user with all the plant data from the user together to create a DICT for comparing with plant class data
 all_user_plant_data = dict(zip(program_plant_name_list, user_plant_data_list))
@@ -502,5 +513,7 @@ def reccomendations():
             print("Your " + key + " is near a window, this is bad!\n")
         else:
             print("Your " + key + " is not near a window, this is good!\n")
-
+    print("\n\n")
 reccomendations()
+
+
