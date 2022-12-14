@@ -66,7 +66,7 @@ supported_plants = [
 
 # Function to initialize first feature of program and adds the first plant to users collection.
 def get_started():
-    user_option = input("To get started, press 'A' to add a plant to your collection.\n\n")
+    user_option = input("To get started, enter 'A' to add a plant to your collection.\n\n")
     os.system("clear")
     if user_option.upper() == "A":
         add_plant = input("\nWhich plant would you like to add?\n\n MONSTERA \n POTHOS \n PEACE LILY \n FICUS \n SUCCULENT \n DRACAENA \n ALOE VERA \n PEPEROMIA \n SNAKE PLANT \n TRADESCANTIA \n CHINESE EVERGREEN \n HOYA \n ANTHURIUM \n PARLOR PALM \n PHILODENDRON \n\n")
@@ -166,9 +166,8 @@ def get_user_water_freq():
                 print("\nINVALID INPUT! Please enter a Number...\n")
 get_user_water_freq()
 
-
-print("\n\nThanks for the info about WATERING your plants!\n\n")
 os.system("clear")
+print("\n\nThanks for the info about WATERING your plants!\n\n\n")
 print(your_table)
 
 
@@ -187,8 +186,8 @@ def get_user_repot_freq():
                 print("\nINVALID INPUT! Please enter a Number...\n")
 get_user_repot_freq()
 
-print("\n\nThanks for the info about RE-POTTING your plants!\n\n")
 os.system("clear")
+print("\n\nThanks for the info about RE-POTTING your plants!\n\n\n")
 print(your_table)
 
 def get_user_plant_location():
@@ -205,26 +204,24 @@ def get_user_plant_location():
                 all_user_plant_data[plant].append((False))   
                 break
             else:
-                print("\nINVALID SELECTION! Please enter 'Y' or 'N' \n")       
+                print("\nINVALID SELECTION! Please enter 'Y' or 'N' \n")   
+                os.system("clear")
+                print(your_table)    
 get_user_plant_location()
 
-print(plant_data)
-
-print("\n\nTESTING\n\n")
-print(all_user_plant_data)
 
 # Extrapolate data from each plant. Getting each block of 3 list items from "plant_data", 
 # storing them in lists then storing all of those lists inside a big list.
 # This is so we can merge that data into a dictionary. EG: {'MONSTERA': [3, 185, True]}  
 
-print("\nThanks for all the data! \n")
+print("\n\n\nThanks for all the data! \n\n")
 input("\nPress ENTER to continue...\n\n")
 os.system("clear")
 
 
 print(your_table)
 
-print("\n\nBased on the details you've submitted, here is some handy information! \n\n")
+print("\n\nBased on the details you've submitted, here is some handy information! \n\n\n")
 
 def recommendations():
     for key in all_user_plant_data.keys():
@@ -274,17 +271,18 @@ def recommendations():
             print("You've got time!, you should re-pot your " + key + " in about " + str(((getattr(PLANTDATA, "repot_freq"))) - ((all_user_plant_data[key][1]))) + " days! \n")
 
         if all_user_plant_data[key][2] and getattr(PLANTDATA, "near_window"):
-                print("Your " + key + " is near a window, this is good!\n")
+                print("Your " + key + " is near a window, this is good!\n\n\n")
         elif not all_user_plant_data[key][2] and getattr(PLANTDATA, "near_window"):
-            print("Your " + key + " is not near a window, this is bad!\n")
+            print("Your " + key + " is not near a window, this is bad!\n\n\n")
         elif all_user_plant_data[key][2] and not getattr(PLANTDATA, "near_window"):
-            print("Your " + key + " is near a window, this is bad!\n")
+            print("Your " + key + " is near a window, this is bad!\n\n\n")
         else:
-            print("Your " + key + " is not near a window, this is good!\n")
+            print("Your " + key + " is not near a window, this is good!\n\n\n")
     print("\n\n")
 recommendations()
 
-def terminate_app():
-    print("\n\nThank you for using PlantApp.\n\n")
-terminate_app()
+
+print("Thank you for using PlantApp.\n\n\n\n")
+
+
 
