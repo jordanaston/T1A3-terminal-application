@@ -31,7 +31,7 @@ print(r"""
 """)
 
 def introduction():
-    print("\n\nWelcome to PLANTAPP. \n")
+    print("\n\nWelcome to PLANTAPP. 🍃\n")
     print("This app is designed to assist you with some basic care taking of your indoor house-plants. \n")
     print("Currently, this app supports the following popular indoor house-plants: \n\nMONSTERA\nPOTHOS\nPEACE LILY\nFICUS\nSUCCULENT\nDRACAENA\nALOE VERA\nPEPEROMIA\nSNAKE PLANT\nTRADESCANTIA\nCHINESE EVERGREEN\nHOYA\nANTHURIUM\nPARLOR PALM\nPHILODENDRON\n")
     print("If you have any plants outside of this list, please come back another time when our list is updated! \nBut for now, let's help you out with what we support :) \n")
@@ -251,33 +251,34 @@ def recommendations():
         if key == "PHILODENDRON":
             PLANTDATA = Plant("PHILODENDRON", 11, 1095, True)
 
+        print(f'{key}:')
         # Prints a recommendation based on the difference between the number of days 
         # since the user watered their plant and the no of days stored in the Plant class under water_freq.
         if all_user_plant_data[key][0] > getattr(PLANTDATA, "water_freq"):
-            print("You're overdue on watering your " + key + " by " + str(((all_user_plant_data[key][0])) - ((getattr(PLANTDATA, "water_freq")))) + " days!\n")
+            print("💦WATERING: You're overdue on watering your " + key + " by " + str(((all_user_plant_data[key][0])) - ((getattr(PLANTDATA, "water_freq")))) + " days!\n")
         elif all_user_plant_data[key][0] == getattr(PLANTDATA, "water_freq"):
-            print("Today's the day to water your " + key + " ! \n")
+            print(f"💦WATERING: Today's the day to water your {key}! \n")
         else:
-            print("No need to stress!, you have " + str(((getattr(PLANTDATA, "water_freq"))) - ((all_user_plant_data[key][0]))) + " days to water your " + key + "! \n")
+            print("💦WATERING: No need to stress!, you have " + str(((getattr(PLANTDATA, "water_freq"))) - ((all_user_plant_data[key][0]))) + " days to water your " + key + "! \n")
 
         # Prints a recommendation based on the difference between the number of days 
         # since the user re-potted their plant and the no of days stored in the Plant class under repot_freq.
         if all_user_plant_data[key][1] > getattr(PLANTDATA, "repot_freq"):
-                print("You're overdue on repotting your " + key + " by " + str(((all_user_plant_data[key][1])) - ((getattr(PLANTDATA, "repot_freq")))) + " days! \n")
+                print("🪴 RE-POTTING: You're overdue on repotting your " + key + " by " + str(((all_user_plant_data[key][1])) - ((getattr(PLANTDATA, "repot_freq")))) + " days! \n")
         elif all_user_plant_data[key][1] == getattr(PLANTDATA, "repot_freq"):
-            print("Today's the day to repot your " + key + " ! \n")
+            print(f"🪴 RE-POTTING: Today's the day to repot your {key}! \n")
         else:
-            print("You've got time!, you should re-pot your " + key + " in about " + str(((getattr(PLANTDATA, "repot_freq"))) - ((all_user_plant_data[key][1]))) + " days! \n")
+            print("🪴 RE-POTTING: You've got time!, you should re-pot your " + key + " in about " + str(((getattr(PLANTDATA, "repot_freq"))) - ((all_user_plant_data[key][1]))) + " days! \n")
 
         # Prints a recommendation based on whether or not the user keeps each plant near a window or not.
         if all_user_plant_data[key][2] and getattr(PLANTDATA, "near_window"):
-                print(f"Your {key} is kept near a window, great stuff! {key}'s need a fair amount of sunlight to remain happy :)\n\n\n")
+                print(f"🌤 LOCATION: Your {key} is kept near a window, great stuff! {key}'s need a fair amount of sunlight to remain happy :)\n\n\n")
         elif not all_user_plant_data[key][2] and getattr(PLANTDATA, "near_window"):
-            print(f"Your {key} is not kept near a window, this isn't great... {key}'s need a fair amount of sunlight to remain happy! \n\n\n")
+            print(f"🌤 LOCATION: Your {key} is not kept near a window, this isn't great... {key}'s need a fair amount of sunlight to remain happy! \n\n\n")
         elif all_user_plant_data[key][2] and not getattr(PLANTDATA, "near_window"):
-            print(f"Your {key} is kept near a window, this isn't great... {key}'s take offence to too much sunlight!\n\n\n")
+            print(f"🌤 LOCATION: Your {key} is kept near a window, this isn't great... {key}'s take offence to too much sunlight!\n\n\n")
         else:
-            print(f"Your {key} is not kept near a window, great stuff! as you obviously already know, {key}'s take offence to too much sunlight! \n\n\n")
+            print(f"🌤 LOCATION: Your {key} is not kept near a window, great stuff! as you obviously already know, {key}'s take offence to too much sunlight! \n\n\n")
     print("\n\n")
 recommendations()
 
