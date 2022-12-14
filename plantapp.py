@@ -2,6 +2,7 @@ from prettytable import PrettyTable
 import numpy as np
 from random import randint
 import pandas
+import pytest
 from requests import get
 from plantclass import Plant
 from plantclass import userPlant
@@ -9,20 +10,16 @@ import os
 
 os.system("clear")
 
-
-# Prettytable data pre-filled
-# your_table = PrettyTable(['Plant Name','No. Days Since Watered', 'No. Days Since Re-Pot','Near Window'])
+# Prettytable collumn header pre-filled.
 your_table = PrettyTable(['Your Plant Collection 🌱',])
 
-# List to handle data behind scenes 
+# Variable defined as an empty list for appending plant names for user collection.
 program_plant_name_list = []
 
-# Dictionary storing user plant data to corresponding plant name
+# Variable defined as an empty list for appending the data associated to each plant in users collection.
 program_plant_data_list = []
 
-
-# Introduction to the app
-
+# Introduction to the app, explaining usecase.
 print(r"""  
              __                   __                                   
     ____    / /  ____ _   ____   / /_         ____ _    ____     ____   
@@ -42,9 +39,10 @@ def introduction():
     os.system("clear")
 introduction()
 
-# Instructions for user input
+# Instructions for user, to be printed throughout app.
 instructions = "\nINSTRUCTIONS: \n1: Enter 'A' to ADD a new plant to your collection. \n2: Enter 'R' to REMOVE a plant from your collection. \n3. Enter 'F' to FINALISE your plant collection. \n "
 
+# List of supported plants for referencing inside functions.
 supported_plants = [
     "MONSTERA",
     "POTHOS",
@@ -63,8 +61,7 @@ supported_plants = [
     "PHILODENDRON",
     ]
 
-
-# Function to initialize first feature of program and adds the first plant to users collection.
+# Function to initialize the first feature of program - adds the first plant to users collection.
 def get_started():
     user_option = input("To get started, enter 'A' to add a plant to your collection.\n\n")
     os.system("clear")
@@ -72,7 +69,7 @@ def get_started():
         add_plant = input("\nWhich plant would you like to add?\n\n MONSTERA \n POTHOS \n PEACE LILY \n FICUS \n SUCCULENT \n DRACAENA \n ALOE VERA \n PEPEROMIA \n SNAKE PLANT \n TRADESCANTIA \n CHINESE EVERGREEN \n HOYA \n ANTHURIUM \n PARLOR PALM \n PHILODENDRON \n\n")
         os.system("clear")
         if add_plant.upper() in supported_plants:
-            print("\n You added " + add_plant.upper() + "! \n")
+            print(f"\n You added {add_plant.upper()}! \n")
             your_table.add_row([add_plant.upper()])
             program_plant_name_list.append(add_plant.upper())
             print(your_table)
@@ -84,16 +81,16 @@ def get_started():
         get_started()
 get_started()            
       
-
 # Function for adding/ removing plants and finalising the users plant collection.
 def update_plant_collection():
     user_option = input("\nWhat would you like to do?\n")
     os.system("clear")
+    # Allows user to add plant to their collection.
     if user_option.upper() == "A":
         add_plant = input("\nWhich plant would you like to add?\n\n MONSTERA \n POTHOS \n PEACE LILY \n FICUS \n SUCCULENT \n DRACAENA \n ALOE VERA \n PEPEROMIA \n SNAKE PLANT \n TRADESCANTIA \n CHINESE EVERGREEN \n HOYA \n ANTHURIUM \n PARLOR PALM \n PHILODENDRON \n\n")
         os.system("clear")
         if add_plant.upper() in supported_plants:
-            print("\n You added " + add_plant.upper() + "! \n")
+            print(f"\n You added {add_plant.upper()}! \n")
             your_table.add_row([add_plant.upper()])
             program_plant_name_list.append(add_plant.upper())
             print(your_table)
@@ -102,7 +99,7 @@ def update_plant_collection():
         else:
             print("\nINVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
             update_plant_collection()
-# Allow for user to remove plant from their collection 
+    # Allows user to remove plant from their collection.
     elif user_option.upper() == "R":
         print(your_table)
         while True:
@@ -113,9 +110,8 @@ def update_plant_collection():
             except ValueError:
                 os.system("clear")
                 print("\nINVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
-            
         if remove_plant <= len(program_plant_name_list) and len(program_plant_name_list) > 0:
-                print("\nYou removed PLANT in position " + (str(remove_plant)) + " from your collection. \n")
+                print(f"\nYou removed PLANT in position {(str(remove_plant))} from your collection. \n")
                 your_table.del_row(int(remove_plant))
                 program_plant_name_list.remove(program_plant_name_list[remove_plant])
                 print(your_table)
@@ -124,33 +120,31 @@ def update_plant_collection():
         else:
             print("\nINVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
             update_plant_collection()
- 
+    # Finalises collection and moves on.
     elif user_option.upper() == "F":
-        print("\nThanks, your collection is complete!\n")
-         
+        print("\nThanks, your collection is complete!\n")  
     else:
         print("\nINVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
         update_plant_collection()
 update_plant_collection()
 
-
-# Declaring Dictioanry and storing the names of the plants (the user input) as KEYS
+# Variable declared as a dictioanry which will store the names of the plants in the users plant collection as KEYS.
 all_user_plant_data = {}
 
+# Stores the user plant collection names as KEYS.
 for plant in program_plant_name_list:
     all_user_plant_data.update({plant:''})
 
-
-# Shows user their final plant collection 
+# Shows user their final plant collection in prettytable. 
 print(your_table)
 
+# Continue prompt.
 input("\n\nPress ENTER to continue...\n\n")
 os.system("clear")
 
-# Gets plant data from user (last water,last re-pot,location) and stores data in a list
+# Takes input from user as an integer re: when they last watered each plant in their collection.
 print(your_table)
 plant_data = []
-
 def get_user_water_freq():
     for plant in program_plant_name_list:
         print("\n\n\n\nTell me a little bit more about your " + plant + "...\n")
@@ -166,11 +160,12 @@ def get_user_water_freq():
                 print("\nINVALID INPUT! Please enter a Number...\n")
 get_user_water_freq()
 
+# Clears for next feature.
 os.system("clear")
 print("\n\nThanks for the info about WATERING your plants!\n\n\n")
 print(your_table)
 
-
+# Takes input from user as an integer re: when they last re-potted each plant in their collection.
 def get_user_repot_freq():
     for plant in program_plant_name_list:
         print("\n\n\n\nTell me a little bit more about your " + plant + "...\n")
@@ -186,15 +181,17 @@ def get_user_repot_freq():
                 print("\nINVALID INPUT! Please enter a Number...\n")
 get_user_repot_freq()
 
+# Clears for next feature.
 os.system("clear")
 print("\n\nThanks for the info about RE-POTTING your plants!\n\n\n")
 print(your_table)
 
+# Takes input from user as a string and converts to boolean re: is their plant located near a window.
 def get_user_plant_location():
     for plant in program_plant_name_list:
-        print("\n\n\n\nTell me a little bit more about your " + plant + "...\n")
+        print(f"\n\n\n\nTell me a little bit more about your {plant} ...\n")
         while True:
-            add_location_data = (input("Y or N, do you keep your " + plant + " near a window? "))
+            add_location_data = (input(f"Y or N, do you keep your {plant} near a window? "))
             if add_location_data.upper() == 'Y': 
                 plant_data.append(True)
                 all_user_plant_data[plant].append((True))
@@ -209,20 +206,18 @@ def get_user_plant_location():
                 print(your_table)    
 get_user_plant_location()
 
-
-# Extrapolate data from each plant. Getting each block of 3 list items from "plant_data", 
-# storing them in lists then storing all of those lists inside a big list.
-# This is so we can merge that data into a dictionary. EG: {'MONSTERA': [3, 185, True]}  
-
+# Continue prompt.
 print("\n\n\nThanks for all the data! \n\n")
 input("\nPress ENTER to continue...\n\n")
 os.system("clear")
 
-
+# Prints pretty table back to the user one last time.
 print(your_table)
-
 print("\n\nBased on the details you've submitted, here is some handy information! \n\n\n")
 
+# Compares the values of each KEY in all_user_plant_data (plant names in user collection) 
+# to the objects in the Plant class. Object has been defined as the variable PLANTDATA 
+# and modulates according to the KEY in all_user_plant_data.
 def recommendations():
     for key in all_user_plant_data.keys():
         if key == "MONSTERA":
@@ -256,6 +251,8 @@ def recommendations():
         if key == "PHILODENDRON":
             PLANTDATA = Plant("PHILODENDRON", 11, 1095, True)
 
+        # Prints a recommendation based on the difference between the number of days 
+        # since the user watered their plant and the no of days stored in the Plant class under water_freq.
         if all_user_plant_data[key][0] > getattr(PLANTDATA, "water_freq"):
             print("You're overdue on watering your " + key + " by " + str(((all_user_plant_data[key][0])) - ((getattr(PLANTDATA, "water_freq")))) + " days!\n")
         elif all_user_plant_data[key][0] == getattr(PLANTDATA, "water_freq"):
@@ -263,6 +260,8 @@ def recommendations():
         else:
             print("No need to stress!, you have " + str(((getattr(PLANTDATA, "water_freq"))) - ((all_user_plant_data[key][0]))) + " days to water your " + key + "! \n")
 
+        # Prints a recommendation based on the difference between the number of days 
+        # since the user re-potted their plant and the no of days stored in the Plant class under repot_freq.
         if all_user_plant_data[key][1] > getattr(PLANTDATA, "repot_freq"):
                 print("You're overdue on repotting your " + key + " by " + str(((all_user_plant_data[key][1])) - ((getattr(PLANTDATA, "repot_freq")))) + " days! \n")
         elif all_user_plant_data[key][1] == getattr(PLANTDATA, "repot_freq"):
@@ -270,18 +269,19 @@ def recommendations():
         else:
             print("You've got time!, you should re-pot your " + key + " in about " + str(((getattr(PLANTDATA, "repot_freq"))) - ((all_user_plant_data[key][1]))) + " days! \n")
 
+        # Prints a recommendation based on whether or not the user keeps each plant near a window or not.
         if all_user_plant_data[key][2] and getattr(PLANTDATA, "near_window"):
-                print("Your " + key + " is near a window, this is good!\n\n\n")
+                print(f"Your {key} is kept near a window, great stuff! {key}'s need a fair amount of sunlight to remain happy :)\n\n\n")
         elif not all_user_plant_data[key][2] and getattr(PLANTDATA, "near_window"):
-            print("Your " + key + " is not near a window, this is bad!\n\n\n")
+            print(f"Your {key} is not kept near a window, this isn't great... {key}'s need a fair amount of sunlight to remain happy! \n\n\n")
         elif all_user_plant_data[key][2] and not getattr(PLANTDATA, "near_window"):
-            print("Your " + key + " is near a window, this is bad!\n\n\n")
+            print(f"Your {key} is kept near a window, this isn't great... {key}'s take offence to too much sunlight!\n\n\n")
         else:
-            print("Your " + key + " is not near a window, this is good!\n\n\n")
+            print(f"Your {key} is not kept near a window, great stuff! as you obviously already know, {key}'s take offence to too much sunlight! \n\n\n")
     print("\n\n")
 recommendations()
 
-
+# End of program.
 print("Thank you for using PlantApp.\n\n\n\n")
 
 
