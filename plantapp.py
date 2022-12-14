@@ -57,14 +57,13 @@ def introduction():
     print("If you have any plants outside of this list, please come back another time when our list is updated! \nBut for now, let's help you out with what we support :) \n")
     input("\n\nPress ENTER to continue...\n\n")
     os.system("clear")
-    # print("To get started, press 'A' to add a plant to your collection. \n")
 introduction()
 
 # Instructions for user input
 instructions = "\nINSTRUCTIONS: \n1: Enter 'A' to ADD a new plant to your collection. \n2: Enter 'R' to REMOVE a plant from your collection. \n3. Enter 'F' to FINALISE your plant collection. \n "
 
 supported_plants = [
-    "MONSTERA", 
+    "MONSTERA",
     "POTHOS",
     "PEACE LILY",
     "FICUS",
@@ -81,6 +80,7 @@ supported_plants = [
     "PHILODENDRON",
     ]
 
+
 # Function to initialize first feature of program and adds the first plant to users collection.
 def get_started():
     user_option = input("To get started, press 'A' to add a plant to your collection.\n\n")
@@ -95,15 +95,14 @@ def get_started():
             print(your_table)
             print(instructions)
         else:
-            print("IVALID SELECTION!")
+            print("INVALID SELECTION!")
             get_started()        
     else:
         get_started()
 get_started()            
-
       
 
-# Function for adding and removing plants to the users plant collection.
+# Function for adding/ removing plants and finalising the users plant collection.
 def update_plant_collection():
     user_option = input("\nWhat would you like to do?\n")
     os.system("clear")
@@ -118,7 +117,7 @@ def update_plant_collection():
             print(instructions)
             update_plant_collection()
         else:
-            print("\nIVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
+            print("\nINVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
             update_plant_collection()
      
     elif user_option.upper() == "R":
@@ -126,7 +125,7 @@ def update_plant_collection():
         remove_plant = int(input("\nWhich plant would you like to remove? \n\nPress '0' for PLANT 1\nPress '1' for PLANT 2\nPress '2' for PLANT 3 and so on...\n\n"))
         os.system("clear")
         if remove_plant <= len(program_plant_name_list):
-                print("\n You removed PLANT in position " + (str(remove_plant)) + " from your collection. \n")
+                print("\nYou removed PLANT in position " + (str(remove_plant)) + " from your collection. \n")
                 your_table.del_row(int(remove_plant))
                 program_plant_name_list.remove(program_plant_name_list[remove_plant])
                 print(your_table)
@@ -140,10 +139,16 @@ def update_plant_collection():
         print("\nThanks, your collection is complete!\n")
          
     else:
-        print("\nIVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
+        print("\nINVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
         update_plant_collection()
 update_plant_collection()
 
+
+# Declaring Dictioanry and storing the names of the plants (the user input) as KEYS
+all_user_plant_data_2 = {}
+
+for plant in program_plant_name_list:
+    all_user_plant_data_2.update({plant:''})
 
 
 # Shows user their final plant collection 
@@ -156,21 +161,67 @@ os.system("clear")
 print(your_table)
 plant_data = []
 
-def get_user_plant_data():
+def get_user_water_freq():
     for plant in program_plant_name_list:
-        print("\n\nTell me a little bit more about your " + plant + "...\n")
-        add_plant_data = int(input("How many days since you last watered your " + plant + "? "))
-        plant_data.append(add_plant_data)
-        add_plant_data = int(input("How many days since you last re-potted your " + plant + "? "))
-        plant_data.append(add_plant_data)
-        add_plant_data = (input("Y or N, do you keep your " + plant + " near a window? "))
-        if add_plant_data.upper() == "Y":
-            plant_data.append(True)
-        elif add_plant_data.upper() == "N":
-            plant_data.append(False)
-        else:
-            print("\nIVALID SELECTION! Please select 'Y' or 'N' \n")
-get_user_plant_data()
+        print("\n\n\n\nTell me a little bit more about your " + plant + "...\n")
+        while True:
+            try:
+                add_water_data = int(input("How many days since you last watered your " + plant + "? "))
+                plant_data.append(add_water_data)
+                all_user_plant_data_2.update({plant: [add_water_data]})
+                break
+            except ValueError:
+                os.system("clear")
+                print(your_table)
+                print("\nINVALID INPUT! Please enter a Number...\n")
+get_user_water_freq()
+
+
+print("\n\nThanks for the info about WATERING your plants!\n\n")
+os.system("clear")
+print(your_table)
+
+
+def get_user_repot_freq():
+    for plant in program_plant_name_list:
+        print("\n\n\n\nTell me a little bit more about your " + plant + "...\n")
+        while True:
+            try:
+                add_repot_data = int(input("How many days since you last re-potted your " + plant + "? "))
+                plant_data.append(add_repot_data)
+                all_user_plant_data_2[plant].append(add_repot_data)
+                break
+            except ValueError:
+                os.system("clear")
+                print(your_table)
+                print("\nINVALID INPUT! Please enter a Number...\n")
+get_user_repot_freq()
+
+print("\n\nThanks for the info about RE-POTTING your plants!\n\n")
+os.system("clear")
+print(your_table)
+
+def get_user_plant_location():
+    for plant in program_plant_name_list:
+        print("\n\n\n\nTell me a little bit more about your " + plant + "...\n")
+        while True:
+            add_location_data = (input("Y or N, do you keep your " + plant + " near a window? "))
+            if add_location_data.upper() == 'Y': 
+                plant_data.append(True)
+                all_user_plant_data_2[plant].append((True))
+                break
+            elif add_location_data.upper() == 'N': 
+                plant_data.append(False)
+                all_user_plant_data_2[plant].append((False))   
+                break
+            else:
+                print("\nINVALID SELECTION! Please enter 'Y' or 'N' \n")       
+get_user_plant_location()
+
+print(plant_data)
+
+print("\n\nTESTING\n\n")
+print(all_user_plant_data_2)
 
 # Extrapolate data from each plant. Getting each block of 3 list items from "plant_data", 
 # storing them in lists then storing all of those lists inside a big list.
