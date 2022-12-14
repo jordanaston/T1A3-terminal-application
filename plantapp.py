@@ -20,23 +20,6 @@ program_plant_name_list = []
 # Dictionary storing user plant data to corresponding plant name
 program_plant_data_list = []
 
-# Object Data for Plant Class
-MONSTERA = Plant("MONSTERA", 11, 365, True)
-POTHOS = Plant("POTHOS", 7, 365, False)
-PEACE_LILY = Plant("PEACE_LILY", 7, 730, False)
-FICUS = Plant("FICUS", 5, 730, True)
-SUCCULENT = Plant("SUCCULENT", 3, 730, True)
-DRACAENA = Plant("DRACAENA", 12, 1460, False)
-ALOE_VERA = Plant("ALOE_VERA", 18, 1095, True)
-PEPEROMIA = Plant("PEPEROMIA", 10, 730, True)
-SNAKE_PLANT = Plant("SNAKE_PLANT", 7, 2555, True)
-TRADESCANTIA = Plant("TRADESCANTIA", 7, 356, False)
-CHINESE_EVERGREEN = Plant("CHINESE_EVERGREEN", 8, 730, True)
-HOYA = Plant("HOYA", 14, 2190, False)
-ANTHURIUM = Plant("ANTHURIUM", 7, 730, False)
-PARLOR_PALM = Plant("PARLOR_PALM", 7, 1095, False)
-PHILODENDRON = Plant("PHILODENDRON", 11, 1095, True)
-
 
 # Introduction to the app
 
@@ -119,12 +102,19 @@ def update_plant_collection():
         else:
             print("\nINVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
             update_plant_collection()
-     
+# Allow for user to remove plant from their collection 
     elif user_option.upper() == "R":
         print(your_table)
-        remove_plant = int(input("\nWhich plant would you like to remove? \n\nPress '0' for PLANT 1\nPress '1' for PLANT 2\nPress '2' for PLANT 3 and so on...\n\n"))
-        os.system("clear")
-        if remove_plant <= len(program_plant_name_list):
+        while True:
+            try:
+                remove_plant = int(input("\nWhich plant would you like to remove? \n\nPress '0' for PLANT 1\nPress '1' for PLANT 2\nPress '2' for PLANT 3 and so on...\n\n"))
+                os.system("clear")
+                break
+            except ValueError:
+                os.system("clear")
+                print("\nINVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
+            
+        if remove_plant <= len(program_plant_name_list) and len(program_plant_name_list) > 0:
                 print("\nYou removed PLANT in position " + (str(remove_plant)) + " from your collection. \n")
                 your_table.del_row(int(remove_plant))
                 program_plant_name_list.remove(program_plant_name_list[remove_plant])
@@ -145,10 +135,10 @@ update_plant_collection()
 
 
 # Declaring Dictioanry and storing the names of the plants (the user input) as KEYS
-all_user_plant_data_2 = {}
+all_user_plant_data = {}
 
 for plant in program_plant_name_list:
-    all_user_plant_data_2.update({plant:''})
+    all_user_plant_data.update({plant:''})
 
 
 # Shows user their final plant collection 
@@ -168,7 +158,7 @@ def get_user_water_freq():
             try:
                 add_water_data = int(input("How many days since you last watered your " + plant + "? "))
                 plant_data.append(add_water_data)
-                all_user_plant_data_2.update({plant: [add_water_data]})
+                all_user_plant_data.update({plant: [add_water_data]})
                 break
             except ValueError:
                 os.system("clear")
@@ -189,7 +179,7 @@ def get_user_repot_freq():
             try:
                 add_repot_data = int(input("How many days since you last re-potted your " + plant + "? "))
                 plant_data.append(add_repot_data)
-                all_user_plant_data_2[plant].append(add_repot_data)
+                all_user_plant_data[plant].append(add_repot_data)
                 break
             except ValueError:
                 os.system("clear")
@@ -208,11 +198,11 @@ def get_user_plant_location():
             add_location_data = (input("Y or N, do you keep your " + plant + " near a window? "))
             if add_location_data.upper() == 'Y': 
                 plant_data.append(True)
-                all_user_plant_data_2[plant].append((True))
+                all_user_plant_data[plant].append((True))
                 break
             elif add_location_data.upper() == 'N': 
                 plant_data.append(False)
-                all_user_plant_data_2[plant].append((False))   
+                all_user_plant_data[plant].append((False))   
                 break
             else:
                 print("\nINVALID SELECTION! Please enter 'Y' or 'N' \n")       
@@ -221,109 +211,20 @@ get_user_plant_location()
 print(plant_data)
 
 print("\n\nTESTING\n\n")
-print(all_user_plant_data_2)
+print(all_user_plant_data)
 
 # Extrapolate data from each plant. Getting each block of 3 list items from "plant_data", 
 # storing them in lists then storing all of those lists inside a big list.
 # This is so we can merge that data into a dictionary. EG: {'MONSTERA': [3, 185, True]}  
-first_plant_list = []
-second_plant_list = []
-third_plant_list = []
-fourth_plant_list = []
-fifth_plant_list = []
-sixth_plant_list = []
-seventh_plant_list = []
-eighth_plant_list = []
-ninth_plant_list = []
-tenth_plant_list = []
-eleventh_plant_list = []
-twelfth_plant_list = []
-thirteenth_plant_list = []
-fourteenth_plant_list = []
-fifteenth_plant_list = []
-
-user_plant_data_list = [
-    first_plant_list,
-    second_plant_list,
-    third_plant_list,
-    fourth_plant_list,
-    fifth_plant_list,
-    sixth_plant_list,
-    seventh_plant_list,
-    eighth_plant_list,
-    ninth_plant_list,
-    tenth_plant_list,
-    eleventh_plant_list,
-    twelfth_plant_list,
-    thirteenth_plant_list,
-    fourteenth_plant_list,
-    fifteenth_plant_list
-]
-
-def add_data_to_lists():
-    for data in plant_data[0:3]:
-        first_plant_list.append(data)
-
-    for data in plant_data[3:6]:
-        second_plant_list.append(data)
-
-    for data in plant_data[6:9]:
-        third_plant_list.append(data)
-
-    for data in plant_data[9:12]:
-        fourth_plant_list.append(data)
-
-    for data in plant_data[12:15]:
-        fifth_plant_list.append(data)
-
-    for data in plant_data[15:18]:
-        sixth_plant_list.append(data)
-
-    for data in plant_data[18:21]:
-        seventh_plant_list.append(data)
-
-    for data in plant_data[21:24]:
-        eighth_plant_list.append(data)
-
-    for data in plant_data[24:27]:
-        ninth_plant_list.append(data)
-
-    for data in plant_data[27:30]:
-        tenth_plant_list.append(data)
-            
-    for data in plant_data[30:33]:
-        eleventh_plant_list.append(data)
-
-    for data in plant_data[33:36]:
-        twelfth_plant_list.append(data)
-
-    for data in plant_data[36:39]:
-        thirteenth_plant_list.append(data)
-
-    for data in plant_data[39:42]:
-        fourteenth_plant_list.append(data)
-
-    for data in plant_data[42:45]:
-        fifteenth_plant_list.append(data)
-add_data_to_lists()
-
-# ZIPS all the plants names from the user with all the plant data from the user together to create a DICT for comparing with plant class data
-all_user_plant_data = dict(zip(program_plant_name_list, user_plant_data_list))
-
-# print(all_user_plant_data)
-print("\n")
 
 print("\nThanks for all the data! \n")
 input("\nPress ENTER to continue...\n\n")
 os.system("clear")
 
-# def add_user_plant_data_to_prettytable():
-#         your_table.add_row(first_plant_list)
 
 print(your_table)
 
 print("\n\nBased on the details you've submitted, here is some handy information! \n\n")
-
 
 def recommendations():
     for key in all_user_plant_data.keys():
