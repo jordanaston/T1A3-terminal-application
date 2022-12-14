@@ -284,5 +284,5 @@ recommendations()
 # End of program.
 print("Thank you for using PlantApp.\n\n\n\n")
 
-
-
+if __name__ == "__main__":
+    pass
