@@ -42,7 +42,7 @@ introduction()
 instructions = "\nINSTRUCTIONS: \n1: Enter 'A' to ADD a new plant to your collection. \n2: Enter 'R' to REMOVE a plant from your collection. \n3. Enter 'F' to FINALISE your plant collection. \n "
 
 # List of supported plants for referencing inside functions.
-supported_plants = [
+supported_plants = (
     "MONSTERA",
     "POTHOS",
     "PEACE LILY",
@@ -58,7 +58,7 @@ supported_plants = [
     "ANTHURIUM",
     "PARLOR PALM",
     "PHILODENDRON",
-    ]
+)
 
 # Function to initialize the first feature of program - adds the first plant to users collection.
 def get_started():
