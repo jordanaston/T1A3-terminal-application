@@ -1,6 +1,6 @@
 #! /bin/bash
 echo "Thank you for downloading PlantApp." 
-sleep 2
+sleep 1
 if ! [[ -x "$(command -v python3)" ]]
 then
   echo 'Error: 
@@ -10,14 +10,14 @@ then
 fi
 echo "Creating the virtual environment..."
 python3 -m venv venv
-sleep 2
+sleep 1
 echo "Activating the virtual environment..."
 source venv/bin/activate
-sleep 2
+sleep 1
 echo "Installing dependencies required to run PlantApp..."
 pip install -r requirements.txt
-sleep 2
+sleep 1
 echo "Launching PlantApp!"
-sleep 2
+sleep 1
 python3 plantapp.py
-
+deactivate
