@@ -36,7 +36,7 @@ python3 --version
 
 - If you don't have Python 3 installed, you can get it from here: https://www.python.org/downloads/
 
-- Head to https://github.com/jordanaston/T1A3-terminal-application and press the green button the says <> Code, then press Download ZIP.
+- Head to https://github.com/jordanaston/T1A3-terminal-application and press the green button that says <> Code, then press Download ZIP.
 
 - Open the ZIP file and extract the directory.
 
