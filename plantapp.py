@@ -1,11 +1,11 @@
 from prettytable import PrettyTable
-import numpy as np
-from random import randint
-import pandas
-import pytest
-from requests import get
+# import numpy as np
+# from random import randint
+# import pandas
+# import pytest
+# from requests import get
 from plantclass import Plant
-from plantclass import userPlant
+# from plantclass import userPlant
 import os
 
 os.system("clear")
