@@ -1,11 +1,8 @@
-from plantapp import program_plant_name_list
+# from plantapp import supported_plants
 
 
 
-def test_program_plant_name_list():
-    program_plant_name_list[0] = 'MONSTERA'
-    print(program_plant_name_list)
-    # assert 'MONSTERA' in program_plant_name_list
+def test_functions():
+    list = ['hello', 'goodbye']
+    assert 'hello' in list
 
-# def test_will_pass():
-#     assert 'hello' == 'hello'

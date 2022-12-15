@@ -1,11 +1,17 @@
 #! /bin/bash
-
-if ! [[ -x "$(command -v python)" ]]
+echo "Thank you for downloading PlantApp."
+sleep 2
+if ! [[ -x "$(command -v python3)" ]]
 then
-  echo 'Error: 
-    This program runs on Python, but it looks like Python is not installed.
-    To install Python, check out https://installpython3.com/' >&2
-  exit 1
-fi
+    echo "You'll need Python 3 installed to run PlantApp. Head to https://www.python.org/downloads/ to download Python. Once you've installed Python 3, re run this script."
+fi    
+sleep 2
+echo "Let's create the virtual environment!"
+python3 -m venv venv
+echo "Let's activate the virtual environment!"
+source venv/bin/activate
+sleep 2
+echo "Now we can run PlantApp."
+sleep 2
+python3 plantapp.py
 
-python3 ./plantapp.py
