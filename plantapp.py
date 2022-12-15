@@ -2,8 +2,8 @@
 # from random import randint
 # import pandas
 # from requests import get
+# import pytest
 from prettytable import PrettyTable
-import pytest
 from plantclass import Plant
 import os
 
