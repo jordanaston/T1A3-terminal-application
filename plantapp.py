@@ -1,11 +1,10 @@
-from prettytable import PrettyTable
 # import numpy as np
 # from random import randint
 # import pandas
-# import pytest
 # from requests import get
+from prettytable import PrettyTable
+import pytest
 from plantclass import Plant
-# from plantclass import userPlant
 import os
 
 os.system("clear")
@@ -285,5 +284,4 @@ recommendations()
 # End of program.
 print("Thank you for using PlantApp.\n\n\n\n")
 
-if __name__ == "__main__":
-    pass
+
