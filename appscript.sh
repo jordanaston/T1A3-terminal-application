@@ -11,6 +11,9 @@ python3 -m venv venv
 echo "Let's activate the virtual environment!"
 source venv/bin/activate
 sleep 2
+echo "Now we'll install the dependancies required to run PlantApp."
+pip install -r ./requirements.txt
+sleep 2
 echo "Now we can run PlantApp."
 sleep 2
 python3 plantapp.py
