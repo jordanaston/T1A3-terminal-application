@@ -6,7 +6,6 @@
 from prettytable import PrettyTable
 from plantclass import Plant
 import os
-import black
 
 os.system("clear")
 
