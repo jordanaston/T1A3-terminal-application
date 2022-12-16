@@ -105,7 +105,7 @@ python3 --version
 
 - Open the ZIP file and extract the directory.
 
-- Open your terminal cd into this directory (titled T1A3-terminal-application).
+- Open your terminal cd into this directory (titled T1A3-terminal-application-main).
 
 - With the following command run the bash script in your terminal to initialise PlantApp.
 ```

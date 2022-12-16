@@ -1,8 +1,9 @@
-# from plantapp import supported_plants
+from plantapp import supported_plants
 
 
 
-def test_functions():
-    list = ['hello', 'goodbye']
-    assert 'hello' in list
+def test_supported_plants(plant):
+    
+    assert plant in supported_plants
 
+supported_plants('MONSTERA')
