@@ -16,6 +16,6 @@ source venv/bin/activate
 sleep 1
 echo "Installing dependencies required to run PlantApp..."
 # pip3 install -r requirements.txt
-pip install -r requirements.txt
+pip install -r .requirements.txt
 sleep 1
 echo "Initializing Setup Complete!"
