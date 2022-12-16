@@ -2,7 +2,7 @@
 # from random import randint
 # import pandas
 # from requests import get
-import pytest
+# import pytest
 from prettytable import PrettyTable
 from plantclass import Plant
 import os
