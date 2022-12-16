@@ -85,10 +85,16 @@ git clone https://github.com/jordanaston/T1A3-terminal-application.git
 
 - Use cd to enter the directory titled T1A3-terminal-application.
 
-- With the following command run the bash script in your terminal to initialise PlantApp.
+- With the following command, run the bash script called setup_app.sh to initialise PlantApp.
+```
+bash setup_app.sh
+```
+
+- With the following command, run the bash script called run_app.sh to launch PlantApp.
 ```
 bash run_app.sh
 ```
+
 
 <br>
 
@@ -107,7 +113,12 @@ python3 --version
 
 - Open your terminal cd into this directory (titled T1A3-terminal-application-main).
 
-- With the following command run the bash script in your terminal to initialise PlantApp.
+- With the following command, run the bash script called setup_app.sh to initialise PlantApp.
+```
+bash setup_app.sh
+```
+
+- With the following command, run the bash script called run_app.sh to launch PlantApp.
 ```
 bash run_app.sh
 ```
