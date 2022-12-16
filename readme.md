@@ -60,35 +60,35 @@ Because the trello board was created long before refactoring the code down with 
 
 <br>
 
-![alt text](images/Trello_Cards.png)
-![alt text](images/Trello_Start.png)
-![alt text](images/Trello_During_1.png)
-![alt text](images/Trello_During_2.png)
-![alt text](images/Trello_During_3.png)
-![alt text](images/Trello_During_4.png)
-![alt text](images/Trello_During_5.png)
-![alt text](images/Trello_During_6.png)
-![alt text](images/Trello_Complete.png)
-![alt text](images/Feature_1_Not_Started.png)
-![alt text](images/Feature_1_Started.png)
-![alt text](images/Feature_1_Continued....png)
-![alt text](images/Feature_1_Finished.png)
-![alt text](images/Feature_1_Finished.png)
-![alt text](images/Feature_2_Not_Started.png)
-![alt text](images/Feature_2_Started.png)
-![alt text](images/Feature_2_Continued.png)
-![alt text](images/Feature_2_Continued_Again.png)
-![alt text](images/Feature_2_Finished.png)
-![alt text](images/Feature_3_Not_Started.png)
-![alt text](images/Feature_3_Started.png)
-![alt text](images/Feature_3_Continued.png)
-![alt text](images/Feature_3_Continued_Again.png)
-![alt text](images/Feature_3_Finished.png)
-![alt text](images/Feature_4_Not_Started.png)
-![alt text](images/Feature_4_Started.png)
-![alt text](images/Feature_4_Continued.png)
-![alt text](images/Feature_4_Continued_Again.png)
-![alt text](images/Feature_4_Finished.png)
+![alt text](./docs/Trello_Cards.png)
+![alt text](./docs/Trello_Start.png)
+![alt text](./docs/Trello_During_1.png)
+![alt text](./docs/Trello_During_2.png)
+![alt text](./docs/Trello_During_3.png)
+![alt text](./docs/Trello_During_4.png)
+![alt text](./docs/Trello_During_5.png)
+![alt text](./docs/Trello_During_6.png)
+![alt text](./docs/Trello_Complete.png)
+![alt text](./docs/Feature_1_Not_Started.png)
+![alt text](./docs/Feature_1_Started.png)
+![alt text](./docs/Feature_1_Continued....png)
+![alt text](./docs/Feature_1_Finished.png)
+![alt text](./docs/Feature_1_Finished.png)
+![alt text](./docs/Feature_2_Not_Started.png)
+![alt text](./docs/Feature_2_Started.png)
+![alt text](./docs/Feature_2_Continued.png)
+![alt text](./docs/Feature_2_Continued_Again.png)
+![alt text](./docs/Feature_2_Finished.png)
+![alt text](./docs/Feature_3_Not_Started.png)
+![alt text](./docs/Feature_3_Started.png)
+![alt text](./docs/Feature_3_Continued.png)
+![alt text](./docs/Feature_3_Continued_Again.png)
+![alt text](./docs/Feature_3_Finished.png)
+![alt text](./docs/Feature_4_Not_Started.png)
+![alt text](./docs/Feature_4_Started.png)
+![alt text](./docs/Feature_4_Continued.png)
+![alt text](./docs/Feature_4_Continued_Again.png)
+![alt text](./docs/Feature_4_Finished.png)
 
 <br>
 
@@ -101,17 +101,17 @@ Because the trello board was created long before refactoring the code down with 
 <br>
 Feature 1 TESTS
 
-![alt text](images/Feature_1_Tests.png)
+![alt text](./docs/images/Feature_1_Tests.png)
 
 <br>
 Feature 4 Y TESTS
 
-![alt text](images/Feature_4_Y_Test.png)
+![alt text](./docs/images/Feature_4_Y_Test.png)
 
 <br>
 Feature 4 N TESTS
 
-![alt text](images/Feature_4_N_Test.png)
+![alt text](./docs/images/Feature_4_N_Test.png)
 
 <br>
 
