@@ -13,7 +13,7 @@
 ## **Application Purpose**
 PlantApp is a terminal application built in Python. It's intent is to assist users with some basic care-taking of their indoor house-plants. At the time of creation, the app supports 15 varieties of popular indoor house-plants. During use of the app, the user will create a 'collection' of their own plants with the ability to add or remove them as the please. Stored inside the app (as the Plant class) is data related to each of the supported plants. The data includes how often you should water and re-pot each plant and the appropriate location the plant should be kept to ensure the right amount of sunlight. The app will ask the user when they last watered and re-pot each plant in their collection. It will also ask if each of their plants is kept near a window or not. Based on the information submitted by the user, the app will generate helpful recommendations by comparing the user data to the data stored by the app. 
 
-The purpose of building this app is to demonstrate my ability to design, implement and test a terminal application in Python, and throughout the process, demonstrate that I am able to use a range of developer tools. The breif for this assignment is to accept user input in the form of a file or text input and produce printed output or interact with the file system. 
+The purpose of building this app is to demonstrate my ability to design, implement and test a terminal application in Python, and throughout the process, demonstrate that I am able to use a range of developer tools. The brief for this assignment is to accept user input in the form of a file or text input and produce printed output or interact with the file system. 
 
 <br>
 
@@ -39,17 +39,79 @@ Once the user has succesuflly added all the 'plant data' (watering, re-potting a
 - If the number of days since the user last watered or re-pot plant 'X' is EQUAL to the number of days you should wait to water or re-pot (according to the Plant class) then a message displays to say 'Today's the day to water / re-pot your plant!
 
 The same concept is applied to the location of the plant (near window / not near window) but this time a boolen is stored in the dictionary. Whether or not the plant 'should' be kept near a window vs if it IS kept near a window, the appropriate message is displayed with a little message about the amount of sunlight each plant requires. 
-<br>
+<br><br>
 
 ## **Code Style-Guide and Styling Conventions**
+
+The chosen style-guide that this application aims to follow is PEP8. 
+
+[PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/)
+
+Authors:
+Guido van Rossum, Barry Warsaw, Nick Coghlan 
 
 <br>
 
 ## **Implementation Plan**
 
+To assist with the planning and implementation of this application, I decided to use a Trello Board to keep track of the individual tasks required to build out each feature. The tasks are prioritized in a checklist within a card for each of the 4 features. Each card includes a due date, colour labels for the type of information included in the checklist and an outline of how each feature will be implemented.
+
+Because the trello board was created long before refactoring the code down with DRY concepts, it should be noted that all planning from the trello board was implemented in the code then changed later during re-factoring. Some concepts may seem a little different due to this.
+
+<br>
+
+![alt text](images/Trello_Cards.png)
+![alt text](images/Trello_Start.png)
+![alt text](images/Trello_During_1.png)
+![alt text](images/Trello_During_2.png)
+![alt text](images/Trello_During_3.png)
+![alt text](images/Trello_During_4.png)
+![alt text](images/Trello_During_5.png)
+![alt text](images/Trello_During_6.png)
+![alt text](images/Trello_Complete.png)
+![alt text](images/Feature_1_Not_Started.png)
+![alt text](images/Feature_1_Started.png)
+![alt text](images/Feature_1_Continued....png)
+![alt text](images/Feature_1_Finished.png)
+![alt text](images/Feature_1_Finished.png)
+![alt text](images/Feature_2_Not_Started.png)
+![alt text](images/Feature_2_Started.png)
+![alt text](images/Feature_2_Continued.png)
+![alt text](images/Feature_2_Continued_Again.png)
+![alt text](images/Feature_2_Finished.png)
+![alt text](images/Feature_3_Not_Started.png)
+![alt text](images/Feature_3_Started.png)
+![alt text](images/Feature_3_Continued.png)
+![alt text](images/Feature_3_Continued_Again.png)
+![alt text](images/Feature_3_Finished.png)
+![alt text](images/Feature_4_Not_Started.png)
+![alt text](images/Feature_4_Started.png)
+![alt text](images/Feature_4_Continued.png)
+![alt text](images/Feature_4_Continued_Again.png)
+![alt text](images/Feature_4_Finished.png)
+
 <br>
 
 ## **Algorithmic Thinking**
+
+<br>
+
+## **Testing**
+
+<br>
+Feature 1 TESTS
+
+![alt text](images/Feature_1_Tests.png)
+
+<br>
+Feature 4 Y TESTS
+
+![alt text](images/Feature_4_Y_Test.png)
+
+<br>
+Feature 4 N TESTS
+
+![alt text](images/Feature_4_N_Test.png)
 
 <br>
 
@@ -60,6 +122,22 @@ The same concept is applied to the location of the plant (near window / not near
 <br>
 
 ### **System Requirements:**
+
+In order to run this application you need Python 3 installed.
+
+According to the [ENTHOUGHT](https://support.enthought.com/hc/en-us/articles/204273874-Enthought-Python-Minimum-Hardware-Requirements) knowledge base, the system requirements are as follows:
+
+Modern Operating System:
+- Windows 7 or 10
+- Mac OS X 10.11 or higher, 64-bit
+- Linux: RHEL 6/7, 64-bit (almost all libraries also work in Ubuntu)
+- x86 64-bit CPU (Intel / AMD architecture)
+- 4 GB RAM
+- 5 GB free disk space
+
+<br>
+
+### **Download and Run PlantApp:**
 
 <br>
 
@@ -123,7 +201,7 @@ bash setup_app.sh
 bash run_app.sh
 ```
 
-Running the executable will do a couple of things automatically.
+Running the executables will do a couple of things automatically.
 
 1. Checks to make sure user has Python 3 installed, and if not, echo's a message to the user with instructions on how to install. 
 2. Creates the virtual environment for the user.
@@ -131,5 +209,7 @@ Running the executable will do a couple of things automatically.
 4. Installs all required dependencies the user will need to run the app. This is done from the requirements.txt file.
 5. Runs the application for the user.
 6. Finally, deactivates the virtual environment.
+
+<br>
 
 ## **References**

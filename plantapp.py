@@ -1,8 +1,3 @@
-# import numpy as np
-# from random import randint
-# import pandas
-# from requests import get
-# import pytest
 from prettytable import PrettyTable
 from plantclass import Plant
 import os
