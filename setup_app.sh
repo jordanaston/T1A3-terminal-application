@@ -14,7 +14,15 @@ sleep 1
 echo "Activating the virtual environment..."
 source venv/bin/activate
 sleep 1
-echo "Installing dependencies required to run PlantApp..."
-pip3 install -r requirements.txt
+if ! [[ -x "$(command -v pip3)" ]]
+then
+    echo "Installing dependencies required to run PlantApp..."
+    pip3 install -r requirements.txt
+
+else ! [[ -x "$(command -v pip)" ]]
+then
+    echo "Installing dependencies required to run PlantApp..."
+    pip install -r requirements.txt
+fi
 sleep 1
 echo "Initializing Setup Complete!"
