@@ -19,8 +19,7 @@ then
     echo "Installing dependencies required to run PlantApp..."
     pip3 install -r requirements.txt
 
-else ! [[ -x "$(command -v pip)" ]]
-then
+else 
     echo "Installing dependencies required to run PlantApp..."
     pip install -r requirements.txt
 fi
