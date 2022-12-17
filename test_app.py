@@ -1,7 +1,7 @@
-from plantapp import supported_plants, your_table, program_plant_name_list, all_user_plant_data, plant_data, Plant
+from plantapp import supported_plants, your_table, program_plant_name_list, all_user_plant_data, plant_data
 
 # TESTING Feature 1
-# Expected Results: PASS
+# Expected Result: PASS
 def test_plant_gets_added():
     add_plant = 'MONSTERA'
     if add_plant in supported_plants:
@@ -11,7 +11,7 @@ def test_plant_gets_added():
 
 # TESTING Feature 1
 # This test must be run with the succeding test 'commented out' as this test requires the plant collection to be removed to 0. 
-# Expected Results: PASS
+# Expected Result: PASS
 # To test, run pytest -s, then add a plant to your collection, remove that same plant, then skip to the end of app for results.
 def test_table_and_list_length():
     remove_plant = 0    
@@ -24,7 +24,7 @@ def test_table_and_list_length():
     
 # TESTING Feature 4    
 # This test must be run on it's own as it accepts user input while a plant exists in the 'collection'. Use pytest -s
-# Expected Results: PASS
+# Expected Result: PASS
 # To test, run pytest -s, then add a plant and make sure you select 'Y' for the 'is near window' question. 
 def test_is_true_in_list_and_dict():
     for plant in program_plant_name_list:
@@ -39,7 +39,7 @@ assert any(True in val for val in all_user_plant_data.values())
 
 # TESTING Feature 4    
 # This test must be run on it's own as it accepts user input while a plant exists in the 'collection'. Use pytest -s
-# Expected Results: PASS
+# Expected Result: PASS
 # To test, run pytest -s, then add a plant and make sure you select 'N' for the 'is near window' question. 
 def test_is_false_in_list_and_dict():
     for plant in program_plant_name_list:

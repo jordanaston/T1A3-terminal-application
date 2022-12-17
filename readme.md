@@ -108,20 +108,85 @@ Recommendations Function Flowchart
 
 ## **Testing**
 
-<br>
-Feature 1 TESTS
-
-![alt text](./docs/Feature_1_Tests.png)
+### **Testing documentation also exists as testing_documentation.txt in the source code and as comments in test_app.py.**
 
 <br>
-Feature 4 Y TESTS
-
-![alt text](./docs/Feature_4_Y_Test.png)
+FIRST Test in test_app.py module:
 
 <br>
-Feature 4 N TESTS
 
-![alt text](./docs/Feature_4_N_Test.png)
+TESTS Feature 1 
+
+The expected outcome of this test is to PASS. 'supported_plants' is a tuple of 15 plant types that the app supports.
+The test gives a value of 'MONSTERA' to add_plant, if add_plant is inside supported_plants the test adds a row to your_table 
+to include the add_plant variable. The test also appends the add_plant variable to 'program_plant_name_list' which is a list 
+that is updated throughout the program when a user adds a plant to their collection. 
+
+The test then checks to assert three certainties. That the value of add_plant is:
+a) actually inside supported_plants
+b) has been appended to program_plant_name_list
+c) exists as a value inside your_table
+
+<br>
+
+SECOND Test in test_app.py module:
+
+TESTS Feature 1 
+
+The expected outcome of this test is to PASS. The test assigns a value of 0 to the remove_plant variable. 
+If the value of remove_plant is LESS than or EQUAL to the length of the list in program_plant_name_list (users plant collection) 
+AND the length program_plant_name_list is GREATER than 0, delete the row in your_table (pretty table list of users plants) by 
+the index assigned to remove_plant. Also, remove the plant in program_plant_name_list by index of remove_plant.
+
+The test then checks to assert three certainties. 
+a) The number of rows in your_table is EQUAL to the number of list items in program_plant_name_list
+b) There are no rows left in your_table
+c) There are no list items left in program_plant_name_list
+
+TO RUN TEST: Run pytest -s, then add a plant to your collection, remove that same plant, then skip to the end of app for results.
+
+<br>
+
+![TEST 1 and 2](./docs/Feature_1_Tests.png)
+
+<br>
+
+THIRD Test in test_app.py module:
+
+TESTS Feature 4
+
+The expected outcome of this test is to PASS. The test assigns a value of 'Y' to add_location_data.
+For each plant in program_plant_name_list, if add_location_data equals 'Y', append the True boolean to plant_data. 
+Also, append the True boolean to each of the values in the keys inside the all_user_plant_data dictionary.
+
+The test then checks to assert two certainties. 
+a) The third list item in plant_data is equal to True 
+b) Does True actually exist as a value inside any list inside the all_user_plant_data dictionary.
+
+TO RUN TEST: Run pytest -s, then add a plant and make sure you select 'Y' for the 'is near window' question. 
+
+<br>
+
+![TEST 3](./docs/Feature_4_Y_Test.png)
+
+<br>
+FOURTH Test in test_app.py module:
+
+TESTS Feature 4
+
+The expected outcome of this test is to PASS. The test assigns a value of 'N' to add_location_data.
+For each plant in program_plant_name_list, if add_location_data equals 'N', append the False boolean to plant_data. 
+Also, append the False boolean to each of the values in the keys inside the all_user_plant_data dictionary.
+
+The test then checks to assert two certainties. 
+a) The third list item in plant_data is equal to False 
+b) Does False actually exist as a value inside any list inside the all_user_plant_data dictionary.
+
+TO RUN TEST: Run pytest -s, then add a plant and make sure you select 'N' for the 'is near window' question.
+
+<br>
+
+![TEST 4](./docs/Feature_4_N_Test.png)
 
 <br>
 
