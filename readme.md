@@ -15,6 +15,8 @@ PlantApp is a terminal application built in Python. It's intent is to assist use
 
 The purpose of building this app is to demonstrate my ability to design, implement and test a terminal application in Python, and throughout the process, demonstrate that I am able to use a range of developer tools. The brief for this assignment is to accept user input in the form of a file or text input and produce printed output or interact with the file system. 
 
+Caveat: For the purpose of this assignment, information regarding water frequency, re-pot frequency and location may not be exactly accurate. For example, the references suggest that you should re-pot a snake plant every 5 to 10 years. So for this particular example, 7 years is used as the re-pot frequency for snake plant.
+
 <br>
 
 ## **Features** 
@@ -73,7 +75,6 @@ Because the trello board was created long before refactoring the code down with 
 ![alt text](./docs/Feature_1_Started.png)
 ![alt text](./docs/Feature_1_Continued....png)
 ![alt text](./docs/Feature_1_Finished.png)
-![alt text](./docs/Feature_1_Finished.png)
 ![alt text](./docs/Feature_2_Not_Started.png)
 ![alt text](./docs/Feature_2_Started.png)
 ![alt text](./docs/Feature_2_Continued.png)
@@ -95,12 +96,14 @@ Because the trello board was created long before refactoring the code down with 
 ## **Algorithmic Thinking**
 
 <br>
-Get Started Function Flowchart
+
+### **Get Started Function Flowchart:**
 
 ![alt text](./docs/get_started_flowchart.png)
 
 <br>
-Recommendations Function Flowchart
+
+### **Recommendations Function Flowchart:**
 
 ![alt text](./docs/recommendations_flowchart.png)
 
@@ -111,7 +114,8 @@ Recommendations Function Flowchart
 ### **Testing documentation also exists as testing_documentation.txt in the source code and as comments in test_app.py.**
 
 <br>
-FIRST Test in test_app.py module:
+
+### **FIRST Test in test_app.py module:**
 
 <br>
 
@@ -123,13 +127,16 @@ to include the add_plant variable. The test also appends the add_plant variable 
 that is updated throughout the program when a user adds a plant to their collection. 
 
 The test then checks to assert three certainties. That the value of add_plant is:
+
 a) actually inside supported_plants
+
 b) has been appended to program_plant_name_list
+
 c) exists as a value inside your_table
 
 <br>
 
-SECOND Test in test_app.py module:
+### **SECOND Test in test_app.py module:**
 
 TESTS Feature 1 
 
@@ -139,8 +146,11 @@ AND the length program_plant_name_list is GREATER than 0, delete the row in your
 the index assigned to remove_plant. Also, remove the plant in program_plant_name_list by index of remove_plant.
 
 The test then checks to assert three certainties. 
+
 a) The number of rows in your_table is EQUAL to the number of list items in program_plant_name_list
+
 b) There are no rows left in your_table
+
 c) There are no list items left in program_plant_name_list
 
 TO RUN TEST: Run pytest -s, then add a plant to your collection, remove that same plant, then skip to the end of app for results.
@@ -151,7 +161,7 @@ TO RUN TEST: Run pytest -s, then add a plant to your collection, remove that sam
 
 <br>
 
-THIRD Test in test_app.py module:
+### **THIRD Test in test_app.py module:**
 
 TESTS Feature 4
 
@@ -160,7 +170,9 @@ For each plant in program_plant_name_list, if add_location_data equals 'Y', appe
 Also, append the True boolean to each of the values in the keys inside the all_user_plant_data dictionary.
 
 The test then checks to assert two certainties. 
+
 a) The third list item in plant_data is equal to True 
+
 b) Does True actually exist as a value inside any list inside the all_user_plant_data dictionary.
 
 TO RUN TEST: Run pytest -s, then add a plant and make sure you select 'Y' for the 'is near window' question. 
@@ -170,7 +182,8 @@ TO RUN TEST: Run pytest -s, then add a plant and make sure you select 'Y' for th
 ![TEST 3](./docs/Feature_4_Y_Test.png)
 
 <br>
-FOURTH Test in test_app.py module:
+
+### **FOURTH Test in test_app.py module:**
 
 TESTS Feature 4
 
@@ -179,7 +192,9 @@ For each plant in program_plant_name_list, if add_location_data equals 'N', appe
 Also, append the False boolean to each of the values in the keys inside the all_user_plant_data dictionary.
 
 The test then checks to assert two certainties. 
+
 a) The third list item in plant_data is equal to False 
+
 b) Does False actually exist as a value inside any list inside the all_user_plant_data dictionary.
 
 TO RUN TEST: Run pytest -s, then add a plant and make sure you select 'N' for the 'is near window' question.
@@ -288,3 +303,21 @@ Running the executables will do a couple of things automatically.
 <br>
 
 ## **References**
+
+‌Garden Health. (n.d.). How to Water and Feed Houseplants - Advice - Westland Garden Health. [online] Available at: https://www.gardenhealth.com/advice/indoor-growing/how-to-water-and-feed-houseplants#:~:text=In%20general%2C%20houseplants [Accessed 17 Dec. 2022].
+
+‌Garden Goods Direct. (n.d.). How to Care for Ficus Plants. [online] Available at: https://gardengoodsdirect.com/blogs/plant-guide/how-to-care-for-ficus-plants#:~:text=The%20Ficus%20plant%20prefers%20to [Accessed 17 Dec. 2022].
+
+HGTV. (n.d.). How to Care for a Snake Plant. [online] Available at: https://www.hgtv.com/outdoors/flowers-and-plants/houseplants/2019/how-often-water-snake-plant.
+
+patorjk.com. (n.d.). Text to ASCII Art Generator (TAAG). [online] Available at: https://patorjk.com/software/taag/#p=display&h=0&f=Slant&t=plant%20app. [Accessed 17 Dec. 2022].
+
+www.i2symbol.com. (n.d.). Plant Symbols Copy and Paste ☘. [online] Available at: https://www.i2symbol.com/symbols/plants [Accessed 17 Dec. 2022].
+
+‌peps.python.org. (n.d.). PEP 8 – Style Guide for Python Code | peps.python.org. [online] Available at: https://peps.python.org/pep-0008/.
+
+
+
+‌
+
+‌

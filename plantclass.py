@@ -1,4 +1,3 @@
-
 class Plant:
     def __init__(self, name, water_freq, repot_freq, near_window):
         self.name = name
