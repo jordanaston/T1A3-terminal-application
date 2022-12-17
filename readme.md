@@ -95,23 +95,33 @@ Because the trello board was created long before refactoring the code down with 
 ## **Algorithmic Thinking**
 
 <br>
+Get Started Function Flowchart
+
+![alt text](./docs/get_started_flowchart.png)
+
+<br>
+Recommendations Function Flowchart
+
+![alt text](./docs/recommendations_flowchart.png)
+
+<br>
 
 ## **Testing**
 
 <br>
 Feature 1 TESTS
 
-![alt text](./docs/images/Feature_1_Tests.png)
+![alt text](./docs/Feature_1_Tests.png)
 
 <br>
 Feature 4 Y TESTS
 
-![alt text](./docs/images/Feature_4_Y_Test.png)
+![alt text](./docs/Feature_4_Y_Test.png)
 
 <br>
 Feature 4 N TESTS
 
-![alt text](./docs/images/Feature_4_N_Test.png)
+![alt text](./docs/Feature_4_N_Test.png)
 
 <br>
 

@@ -13,6 +13,9 @@ program_plant_name_list = []
 # Variable defined as an empty list for appending the data associated to each plant in users collection.
 program_plant_data_list = []
 
+# Variable declared as a dictioanry which will store the names of the plants in the users plant collection as KEYS.
+all_user_plant_data = {}
+
 # Introduction to the app, explaining usecase.
 print(r"""  
              __                   __                                   
@@ -121,9 +124,6 @@ def update_plant_collection():
         print("\nINVALID SELECTION! Please select 'A' (ADD Plant), 'R' (Remove Plant) or 'F' (Finalise Collection)\n")
         update_plant_collection()
 update_plant_collection()
-
-# Variable declared as a dictioanry which will store the names of the plants in the users plant collection as KEYS.
-all_user_plant_data = {}
 
 # Stores the user plant collection names as KEYS.
 for plant in program_plant_name_list:
