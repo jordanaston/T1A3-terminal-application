@@ -6,7 +6,7 @@
 
 ## [Trello Board](https://trello.com/b/DqOqT1Yt/t1a3-terminal-application)
 
-## [Presentation](youtube.com)
+## [Presentation](https://youtu.be/A8KCzD5T76o)
 
 <br>
 

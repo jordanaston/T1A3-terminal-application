@@ -138,14 +138,12 @@ os.system("clear")
 
 # Takes input from user as an integer re: when they last watered each plant in their collection.
 print(your_table)
-plant_data = []
 def get_user_water_freq():
     for plant in program_plant_name_list:
         print("\n\n\n\nTell me a little bit more about your " + plant + "...\n")
         while True:
             try:
                 add_water_data = int(input("How many days since you last watered your " + plant + "? "))
-                plant_data.append(add_water_data)
                 all_user_plant_data.update({plant: [add_water_data]})
                 break
             except ValueError:
@@ -166,7 +164,6 @@ def get_user_repot_freq():
         while True:
             try:
                 add_repot_data = int(input("How many days since you last re-potted your " + plant + "? "))
-                plant_data.append(add_repot_data)
                 all_user_plant_data[plant].append(add_repot_data)
                 break
             except ValueError:
@@ -187,11 +184,9 @@ def get_user_plant_location():
         while True:
             add_location_data = (input(f"Y or N, do you keep your {plant} near a window? "))
             if add_location_data.upper() == 'Y': 
-                plant_data.append(True)
                 all_user_plant_data[plant].append((True))
                 break
             elif add_location_data.upper() == 'N': 
-                plant_data.append(False)
                 all_user_plant_data[plant].append((False))   
                 break
             else:
